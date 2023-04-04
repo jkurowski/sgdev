@@ -88,6 +88,35 @@ class FloorController extends Controller
         return redirect()->route('admin.developro.investment.floor.index', $investment)->with('success', 'Pietro zaktualizowane');
     }
 
+    public function copy(Investment $investment, Floor $floor)
+    {
+        $newFloor = $floor->replicate();
+        $newFloor->html = '';
+        $newFloor->cords = '';
+        $newFloor->file = '';
+        $newFloor->file_webp = '';
+        $newFloor->name = $floor->name.' - kopia';
+        $newFloor->number = $floor->number + 1;
+        $newFloor->position = $floor->position + 1;
+        $newFloor->save();
+
+        if($floor->properties->count() > 0){
+            foreach($floor->properties as $p) {
+                $newProperty = $p->replicate();
+                $newProperty->name = $p->name.' - kopia';
+                $newProperty->html = '';
+                $newProperty->cords = '';
+                $newProperty->file = '';
+                $newProperty->file_webp = '';
+                $newProperty->file_pdf = '';
+                $newProperty->floor_id = $newFloor->id;
+                $newProperty->save();
+            }
+        }
+
+        return redirect()->route('admin.developro.investment.floor.index', $investment)->with('success', 'Pietro skopiowane');
+    }
+
     public function destroy(int $id)
     {
         $this->repository->delete($id);

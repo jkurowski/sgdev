@@ -17,6 +17,8 @@ class Floor extends Model
         'investment_id',
         'building_id',
         'name',
+        'number',
+        'position',
         'type',
         'area_range',
         'html',
@@ -24,7 +26,8 @@ class Floor extends Model
         'file',
         'file_webp',
         'meta_title',
-        'meta_description'
+        'meta_description',
+        'active'
     ];
 
     public function properties()

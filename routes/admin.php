@@ -131,6 +131,9 @@ Route::group([
             // Inwestycja domkowa
             'investment.house' => 'HouseController'
             ]);
+
+            Route::get('{investment}/floor/{floor}/copy', 'FloorController@copy')->name('floor.copy');
+            Route::get('{investment}/building/{building}/floor/{floor}/copy', 'BuildingFloorController@copy')->name('building.floor.copy');
         });
     });
 

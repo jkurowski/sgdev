@@ -45,6 +45,11 @@
                             @include('form-elements.mappa', ['label' => 'Współrzędne punktów', 'name' => 'cords', 'value' => $entry->cords, 'rows' => 10, 'class' => 'mappa-html'])
                             @include('form-elements.mappa', ['label' => 'Współrzędne punktów HTML', 'name' => 'html', 'value' => $entry->html, 'rows' => 10, 'class' => 'mappa-area'])
                         </div>
+                        @include('form-elements.html-select', ['label' => 'Widoczne', 'name' => 'active', 'selected' => $entry->active, 'select' => [
+                            '1' => 'Tak',
+                            '0' => 'Nie'
+                            ]
+                        ])
                         @include('form-elements.html-select', [
                             'label' => 'Typ piętra',
                             'name' => 'type',
@@ -58,7 +63,8 @@
                         @include('form-elements.input-text', ['label' => 'Nazwa piętra', 'name' => 'name', 'value' => $entry->name, 'required' => 1])
                         @include('form-elements.html-input-text-count', ['label' => 'Nagłówek strony', 'sublabel'=> 'Meta tag - title', 'name' => 'meta_title', 'value' => $entry->meta_title, 'maxlength' => 60])
                         @include('form-elements.html-input-text-count', ['label' => 'Opis strony', 'sublabel'=> 'Meta tag - description', 'name' => 'meta_description', 'value' => $entry->meta_description, 'maxlength' => 158])
-                        @include('form-elements.input-text', ['label' => 'Numer piętra', 'name' => 'number', 'value' => $entry->number])
+                        @include('form-elements.input-text', ['label' => 'Numer piętra', 'name' => 'number', 'value' => $entry->number, 'required' => 1])
+                        @include('form-elements.input-text', ['label' => 'Kolejność', 'name' => 'position', 'value' => $entry->position, 'required' => 1])
                         @include('form-elements.input-text', ['label' => 'Zakres powierzchni w wyszukiwarce xx-xx', 'sublabel' => '(zakresy oddzielone przecinkiem)', 'name' => 'area_range', 'value' => $entry->area_range])
                         @include('form-elements.input-text', ['label' => 'Zakres cen w wyszukiwarce xx-xx', 'sublabel' => '(zakresy oddzielone przecinkiem)', 'name' => 'price_range', 'value' => $entry->price_range])
                         @include('form-elements.html-input-file', ['label' => 'Miniaturka', 'sublabel' => '(wymiary: '.config('images.floor_plan.width').'px / '.config('images.floor_plan.height').'px)', 'name' => 'file'])

@@ -41,6 +41,7 @@
                                 <td>{{ $p->updated_at }}</td>
                                 <td class="option-120">
                                     <div class="btn-group">
+                                        <a href="{{route('admin.developro.floor.copy', [$investment, $p])}}" class="btn action-button me-1" data-bs-toggle="tooltip" data-placement="top" data-bs-title="Kopiuj piętro"><i class="fe-copy"></i></a>
                                         <a href="{{route('admin.developro.investment.floor.property.index', [$investment, $p])}}" class="btn action-button me-1" data-toggle="tooltip" data-placement="top" title="Pokaż piętro"><i class="fe-folder"></i></a>
                                         <a href="{{route('admin.developro.investment.floor.edit', [$investment, $p])}}" class="btn action-button me-1" data-toggle="tooltip" data-placement="top" title="Edytuj piętro"><i class="fe-edit"></i></a>
                                         <form method="POST" action="{{route('admin.developro.investment.floor.destroy', [$investment, $p])}}">
