@@ -94,23 +94,6 @@
     });
 </script>
 
-<script type="text/javascript">
-    WebFontConfig = {
-        google: { families: [ 'Merriweather:300,400,700,900|Montserrat:400,500,600' ] }
-    };
-
-    (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-        wf.async = true;
-        s.parentNode.insertBefore(wf, s);
-    })(document);
-
-    $(document).ready(function(){
-
-    });
-</script>
-
 {!! settings()->get("scripts_beforebody") !!}
 
 </body>
