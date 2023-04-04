@@ -117,9 +117,9 @@ class FloorController extends Controller
         return redirect()->route('admin.developro.investment.floor.index', $investment)->with('success', 'Pietro skopiowane');
     }
 
-    public function destroy(int $id)
+    public function destroy(Investment $investment, Floor $floor)
     {
-        $this->repository->delete($id);
+        $this->repository->delete($floor->id);
         return response()->json('Deleted');
     }
 }
