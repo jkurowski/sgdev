@@ -552,8 +552,8 @@ div[class*='col-'].slick-slide {
   padding-right: 15px;
 }
 #plan-holder {
-  padding: 0 90px;
   position: relative;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
 }
 #plan-holder div {
   margin: 0 auto;
@@ -575,7 +575,7 @@ div[class*='col-'].slick-slide {
   padding: 0 90px;
 }
 #filtr form {
-  background: white;
+  background: var(--main-color-blue);
   padding: 15px 30px 30px;
   -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
@@ -718,10 +718,6 @@ div[class*='col-'].slick-slide {
   border-radius: 8px 8px 0 0;
   background: #957d4c;
 }
-#roomsList {
-  border-bottom: 1px solid #e5e5e5;
-  padding: 0 90px;
-}
 #roomsList .row {
   background: white;
   border-top: 1px solid #e5e5e5;
@@ -805,7 +801,6 @@ div[class*='col-'].slick-slide {
   padding-bottom: 1px;
 }
 .property #property {
-  background: #213c13 url("../../gfx/green-bg.png");
   padding: 60px 0;
 }
 .property #property h6 {

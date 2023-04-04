@@ -1,5 +1,5 @@
 <div id="filtr">
-    <div class="container-fluid">
+    <div class="container">
         <form method="get" class="row" action="">
             <div class="col-6 col-md-3">
                 <label for="filtr-rooms" class="w-100">Pokoje</label>

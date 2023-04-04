@@ -1,5 +1,5 @@
 <div id="roomsList">
-    <div class="container-fluid">
+    <div class="container">
         @if($properties->count() > 0)
             @foreach($properties as $room)
                 <div class="row">

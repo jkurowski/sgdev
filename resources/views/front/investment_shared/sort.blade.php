@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <div id="sortList" class="row form-group pt-3 pb-3">
         <div class="col-3">
             <div class="row">

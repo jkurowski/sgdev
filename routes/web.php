@@ -23,6 +23,9 @@ Route::middleware(['restrictIp'])->group(function () {
     Route::get('/',
         'Front\IndexController@index')->name('index');
 
+    Route::post('/property-contact/{property}',
+        'Front\ContactController@property')->name('contact.property');
+
     Route::get('o-nas',
         'Front\AboutController@index')->name('about');
 
@@ -37,6 +40,14 @@ Route::middleware(['restrictIp'])->group(function () {
     // Developro
     Route::group(['namespace' => 'Front', 'prefix'=>'/mieszkania', 'as' => 'front.investment.'], function() {
 
+        Route::get('/',
+            'InvestmentController@show')->name('show');
+
+        Route::get('/pietro/{floor}',
+            'InvestmentFloorController@index')->name('floor.index');
+
+        Route::get('/pietro/{floor}/m/{property}',
+            'InvestmentPropertyController@index')->name('property.index');
     });
 
     // Articles
