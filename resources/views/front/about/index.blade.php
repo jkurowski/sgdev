@@ -21,20 +21,36 @@
                     <p class="pt-5 pb-3"><strong>Współpracujemy z:</strong></p>
                     <div class="row">
                         <div class="col-4">
-                            <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/unibed-logo.png" alt="">
+                            <div class="border-gradient">
+                                <div class="partner-logo">
+                                    <img src="{{ asset('/uploads/unibep-logo.png') }}" width="332" height="221" alt="Unibep logo">
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/orlik-jantar-logo.png" alt="">
+                            <div class="border-gradient">
+                                <div class="partner-logo">
+                                    <img src="{{ asset('/uploads/orlik-jantar.png') }}" width="332" height="221" alt="Orlik Jantar logo">
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/wsm-ochota-logo.png" alt="">
+                            <div class="border-gradient">
+                                <div class="partner-logo">
+                                    <img src="{{ asset('/uploads/wsm-ochota-logo.png') }}" width="332" height="221" alt="WSM Ochota logo">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="block-img">
-                    <img src="https://placehold.co/960x680" alt="">
+                    <picture>
+                        <source type="image/webp" srcset="{{ asset('/uploads/o-nas.webp') }}">
+                        <source type="image/jpeg" srcset="{{ asset('/uploads/o-nas.jpg') }}">
+                        <img src="{{ asset('/uploads/o-nas.jpg') }}" alt="Widok budynku, zielone otoczenia, ludzie" width="960" height="680">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -112,7 +128,11 @@
             </div>
             <div class="col-6">
                 <div class="block-img">
-                    <img src="https://placehold.co/960x680" alt="">
+                    <picture>
+                        <source type="image/webp" srcset="{{ asset('/uploads/o-nas-2.webp') }}">
+                        <source type="image/jpeg" srcset="{{ asset('/uploads/o-nas-2.jpg') }}">
+                        <img src="{{ asset('/uploads/o-nas-2.jpg') }}" alt="Widok budynku, zielone otoczenia, ludzie" width="960" height="680">
+                    </picture>
                 </div>
             </div>
         </div>

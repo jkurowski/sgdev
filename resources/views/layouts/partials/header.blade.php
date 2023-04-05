@@ -14,7 +14,7 @@
                         <ul class="mb-0 list-unstyled d-flex h-100 justify-content-end ps-5">
                             <li><a href="">Inwestycje w sprzedaży</a></li>
                             <li><a href="{{ route('about') }}">O nas</a></li>
-                            <li><a href="">Aktualności</a></li>
+                            <li><a href="{{ route('front.news.index') }}">Aktualności</a></li>
                             <li><a href="">Inwestycje zrealizowane</a></li>
                             <li><a href="{{ route('land') }}">Zakup gruntów</a></li>
                             <li><a href="{{ route('contact.index') }}">Kontakt</a></li>

@@ -350,12 +350,14 @@
                 <article>
                     <div class="news-entry d-flex">
                         <div class="news-thumb">
-                            <a href=""><img src="https://sgdevelopment.pl/wp-content/uploads/2022/04/news-article-2.jpg" alt=""></a>
+                            <a href="">
+                                <img src="{{ asset('/uploads/news-1.jpg') }}" alt="">
+                            </a>
                         </div>
                         <div class="news-text ps-4">
                             <h2><a href="">Budynek usługowo-biurowy na Mokotowie.</a></h2>
                             <p>Inwestycja w przygotowaniu.</p>
-                            <a href="" class="bttn bttn-sm mt-4">CZYTAJ WIĘCEJ</a>
+                            <a href="{{ route('front.news.index') }}" class="bttn bttn-sm mt-4">CZYTAJ WIĘCEJ</a>
                         </div>
                     </div>
                 </article>
@@ -364,12 +366,14 @@
                 <article>
                     <div class="news-entry d-flex">
                         <div class="news-thumb">
-                            <a href=""><img src="https://sgdevelopment.pl/wp-content/uploads/2022/04/news-article-2.jpg" alt=""></a>
+                            <a href="">
+                                <img src="{{ asset('/uploads/news-2.jpg') }}" alt="">
+                            </a>
                         </div>
                         <div class="news-text ps-4">
                             <h2><a href="">Dziennik budowy</a></h2>
                             <p>Po rozpoczęciu budowy będziemy publikować informację o bieżącym postępie prac.</p>
-                            <a href="" class="bttn bttn-sm mt-4">CZYTAJ WIĘCEJ</a>
+                            <a href="{{ route('front.news.index') }}" class="bttn bttn-sm mt-4">CZYTAJ WIĘCEJ</a>
                         </div>
                     </div>
                 </article>
