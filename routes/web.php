@@ -32,6 +32,9 @@ Route::middleware(['restrictIp'])->group(function () {
     Route::get('zakup-gruntow',
         'Front\LandController@index')->name('land');
 
+    Route::get('inwestycje-zrealizowane',
+        'Front\CompletedController@index')->name('completed');
+
     Route::get('kontakt',
         'Front\ContactController@index')->name('contact.index');
     Route::post('kontakt',

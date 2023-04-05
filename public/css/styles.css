@@ -236,6 +236,8 @@ strong {
 p,
 li {
   margin: 0;
+  font-size: 18px;
+  line-height: 30px;
 }
 h2 {
   font-size: 35px;
@@ -352,6 +354,27 @@ button:focus,
   font-size: 23px;
   margin-left: 30px;
 }
+.gradient-border {
+  border-right: 3px solid #FA9D25;
+  border-left: 3px solid #DA5A11;
+  padding: 30px;
+  position: relative;
+}
+.gradient-border:after,
+.gradient-border:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: #da5a11;
+  background: linear-gradient(90deg, #da5a11 0%, #f8b041 44%, #fa9d25 100%);
+}
+.gradient-border:after {
+  bottom: 0;
+  top: auto;
+}
 /* Import
 ================================================== */
 header {
@@ -364,6 +387,7 @@ header nav ul li {
   display: flex;
   align-items: center;
   margin-left: 30px;
+  line-height: normal;
 }
 header nav ul li a {
   color: var(--main-color-blue);
@@ -372,9 +396,23 @@ header nav ul li a {
   -moz-transition: all 100ms linear;
   -o-transition: all 100ms linear;
   transition: all 100ms linear;
+  font-size: 16px;
 }
 header nav ul li a:hover {
   color: var(--main-color-orange);
+}
+.header-holder {
+  height: 84px;
+}
+#header.fixed {
+  background: white;
+  position: fixed;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(50, 50, 50, 0.14);
+  -moz-box-shadow: 0 2px 2px 0 rgba(50, 50, 50, 0.14);
+  box-shadow: 0 2px 2px 0 rgba(50, 50, 50, 0.14);
+  width: 100%;
+  z-index: 9900;
+  top: 0;
 }
 footer {
   background: var(--main-color-blue);
@@ -1343,6 +1381,10 @@ section {
 .section-title span {
   color: var(--main-color-orange);
 }
+.section-title.text-start h2:after {
+  left: 0;
+  right: auto;
+}
 .icon-box {
   margin-top: 90px;
 }
@@ -1459,6 +1501,7 @@ section {
 }
 #page-header .breadcrumb {
   margin: 0;
+  justify-content: center;
 }
 #page-header .breadcrumb li,
 #page-header .breadcrumb a {
@@ -1755,6 +1798,35 @@ html.swipebox-html.swipebox-touch {
 }
 #swipebox-slider .slide img {
   background: white;
+}
+.col-gallery-thumb {
+  margin-bottom: 30px;
+}
+.col-gallery-thumb img,
+.col-gallery-thumb a {
+  display: block;
+  position: relative;
+}
+.col-gallery-thumb a {
+  overflow: hidden;
+}
+.col-gallery-thumb div {
+  position: absolute;
+  background: rgba(249, 166, 50, 0.81);
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.col-gallery-thumb div i {
+  color: var(--main-color-gold);
+  font-size: 32px;
+}
+/* Zrealizowane
+================================================== */
+.completed-text.position-sticky {
+  top: 130px;
 }
 /* Contact
 ================================================== */
