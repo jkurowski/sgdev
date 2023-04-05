@@ -13,21 +13,7 @@
         <div class="row no-gutters">
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <div class="block-text">
-
-                    <p><strong>Jesteśmy zainteresowani nabyciem gruntów inwestycyjnych pod budownictwo wielorodzinne na terenie Warszawy i okolic.</strong></p>
-                    <p>&nbsp;</p>
-                    <p>Interesują nas zarówno grunty niezabudowane,jak i te z budynkami przeznaczonymi do wyburzenia.</p>
-                    <p>&nbsp;</p>
-                    <p><strong>Serdecznie zapraszamy do kontaktu:</strong></p>
-
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            telefon: <a href=""><strong>+48 605 433 401</strong></a>
-                        </li>
-                        <li>
-                            email: <a href="">grunty@sgdevelopment.pl</a>
-                        </li>
-                    </ul>
+                    {!! parse_text($page->content) !!}
                 </div>
             </div>
             <div class="col-6">
