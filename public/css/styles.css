@@ -2,7 +2,8 @@
 ================================================== */
 :root {
   --main-color-blue: #04025f;
-  --main-color-orange: #fd7f29;
+  --main-color-orange: #E77427;
+  --main-color-orange-border: #d46216;
   --bttn-color: #fff;
   --bttn-hover-color: #fff;
   --bttn-hover-background: #fff;
@@ -310,15 +311,15 @@ button:focus,
   font-size: 16px;
   display: inline-flex;
   padding: 15px 45px;
-  color: var(--main-color-blue);
+  color: #fff;
   border-radius: var(--bttn-radius);
   text-decoration: none;
   font-weight: 500;
   justify-content: center;
-  background: var(--bttn-background);
+  background: var(--main-color-orange);
   line-height: normal;
   position: relative;
-  border: 1px solid var(--main-color-blue);
+  border: 1px solid var(--main-color-orange-border);
   -webkit-transition: all 200ms linear;
   -moz-transition: all 200ms linear;
   -o-transition: all 200ms linear;
@@ -411,12 +412,13 @@ footer #logo img {
 #slider {
   background: white;
   padding: 0;
+  position: relative;
 }
 #slider .slider-apla {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  background: rgba(11, 9, 65, 0.7);
+  background: rgba(11, 9, 65, 0.8);
   width: 460px;
   padding: 30px;
 }
@@ -428,8 +430,58 @@ footer #logo img {
 #slider .slider-apla p {
   margin: 0;
 }
+#slider .slider-apla .bttn {
+  background: var(--main-color-orange);
+  color: white;
+}
 #slider .slider-apla .bttn:hover {
   border-color: var(--main-color-orange);
+}
+#slider .rslides_nav {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-color-orange);
+}
+#slider .rslides_nav.prev {
+  left: 20px;
+}
+#slider .rslides_nav.next {
+  right: 20px;
+}
+#slider .rslides_nav i {
+  color: white;
+  font-size: 32px;
+}
+#slider .rslides_tabs {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 30;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+#slider .rslides_tabs a {
+  text-indent: 999px;
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: 3px;
+  transition: all 200ms linear;
+}
+#slider .rslides_tabs .rslides_here a {
+  background: #8b8ea3;
 }
 .rslides {
   position: relative;
@@ -1270,6 +1322,20 @@ section {
 }
 .section-title h2 {
   color: var(--main-color-blue);
+  position: relative;
+  padding-bottom: 30px;
+}
+.section-title h2:after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  background: var(--main-color-orange);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .section-title.bg-blue h2 {
   color: white;
@@ -1377,7 +1443,8 @@ section {
   overflow: hidden;
   height: 100%;
 }
-.block-img img {
+.block-img img,
+.block-img picture {
   min-height: 100%;
   min-width: 100%;
   object-fit: cover;
@@ -1699,6 +1766,14 @@ html.swipebox-html.swipebox-touch {
   background: rgba(255, 255, 255, 0.7);
   padding: 40px 25px;
 }
+#contact .row-apla .bttn {
+  background: var(--main-color-orange);
+  border-color: #d46216;
+  color: white;
+}
+#contact .row-apla .bttn:hover {
+  border-color: var(--main-color-orange);
+}
 .form-control {
   border: 1px solid #dbdbdb;
   padding: 10px 16px;
@@ -1735,7 +1810,7 @@ html.swipebox-html.swipebox-touch {
 .contact-box .contact-icon {
   height: 85px;
   width: 85px;
-  background: var(--main-color-blue);
+  background: var(--main-color-orange);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1743,7 +1818,7 @@ html.swipebox-html.swipebox-touch {
   margin: 0 auto;
 }
 .contact-box .contact-icon i {
-  color: var(--main-color-orange);
+  color: #fff;
   font-size: 42px;
 }
 .contact-box h3 {

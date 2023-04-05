@@ -24,7 +24,8 @@ class SliderFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string|min:5|max:100',
+            'title' => 'required|min:5|max:100',
+            'text' => 'required|min:5|max:120',
             'file_alt' => '',
             'link' => '',
             'link_button' => '',

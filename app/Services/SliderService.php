@@ -7,9 +7,6 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManagerStatic as Image;
 
-//CMS
-use App\Models\Slider;
-
 class SliderService
 {
     public function upload(string $title, UploadedFile $file, object $model, bool $delete = false)
@@ -24,24 +21,24 @@ class SliderService
             }
         }
 
-        $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('slider', $name, 'public_uploads');
+        $file_name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
+        $file->storeAs('slider', $file_name, 'public_uploads');
 
-        $filepath = public_path('uploads/slider/' . $name);
-        $thumb_filepath = public_path('uploads/slider/thumbs/' . $name);
+        $filepath = public_path('uploads/slider/' . $file_name);
+        $thumb_filepath = public_path('uploads/slider/thumbs/' . $file_name);
 
         Image::make($filepath)
             ->fit(
-                config('images.slider_big.width'),
-                config('images.slider_big.height')
+                config('images.slider.big_width'),
+                config('images.slider.big_height')
             )->save($filepath);
 
         Image::make($filepath)
             ->fit(
-                config('images.slider_thumb.width'),
-                config('images.slider_thumb.height')
+                config('images.slider.thumb_width'),
+                config('images.slider.thumb_height')
             )->save($thumb_filepath);
 
-        $model->update(['file' => $name]);
+        $model->update(['file' => $file_name]);
     }
 }

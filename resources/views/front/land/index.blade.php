@@ -32,7 +32,11 @@
             </div>
             <div class="col-6">
                 <div class="block-img">
-                    <img src="https://placehold.co/960x680" alt="">
+                    <picture>
+                        <source type="image/webp" srcset="{{ asset('/uploads/kupimy-grunty.webp') }}">
+                        <source type="image/jpeg" srcset="{{ asset('/uploads/kupimy-grunty.jpg') }}">
+                        <img src="{{ asset('/uploads/kupimy-grunty.jpg') }}" alt="Widok budynku, zielone otoczenia, ludzie" width="960" height="680">
+                    </picture>
                 </div>
             </div>
         </div>

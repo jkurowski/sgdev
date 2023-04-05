@@ -41,9 +41,14 @@
         </div>
 
         <div class="row d-flex justify-content-center pt-4 pt-xl-5 mt-4 mt-xl-5">
+            <div class="col-12">
+                <div class="section-title text-center mb-4">
+                    <span>KONTAKT Z NAMI</span>
+                    <h2>MASZ PYTANIA? NAPISZ LUB ZADZWOŃ DO NAS!</h2>
+                </div>
+            </div>
             <div class="col-12 col-xl-8">
                 <div class="text-center">
-                    <h3 class="mb-3">Masz pytania?</h3>
                     <p>Nasza kadra to doświadczeni i wykwalifikowani menadżerowie, projektanci, sprzedawcy i inżynierowie, którzy są w stanie sprostać każdemu wyzwaniu, jakie niesie ze sobą proces inwestycyjny.</p>
                 </div>
             </div>

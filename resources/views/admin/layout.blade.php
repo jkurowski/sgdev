@@ -42,7 +42,7 @@
                         <span> Blokada dostępu </span>
                     </a>
                 </li>
-                <li class="{{ Request::routeIs('admin.slider.*') ? 'active' : '' }} d-none">
+                <li class="{{ Request::routeIs('admin.slider.*') ? 'active' : '' }}">
                     <a href="{{route('admin.slider.index')}}">
                         <i class="fe-airplay"></i>
                         <span> Slider </span>
@@ -76,12 +76,6 @@
                     <a href="{{route('admin.inbox.index')}}">
                         <i class="fe-inbox"></i>
                         <span> Wiadomości </span>
-                    </a>
-                </li>
-                <li class="{{ Request::routeIs('admin.tracker.*') ? 'active' : '' }}">
-                    <a href="{{route('admin.tracker.index')}}">
-                        <i class="fe-activity"></i>
-                        <span> Statystyki </span>
                     </a>
                 </li>
                 <li class="{{ Request::routeIs('admin.box.*') ? 'active' : '' }} d-none">

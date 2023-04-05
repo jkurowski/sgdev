@@ -30,14 +30,22 @@
 
 <section id="slider">
     <ul class="mb-0 list-unstyled rslides">
+        @foreach($sliders as $panel)
         <li>
-            <img src="https://placehold.co/1920x800" class="w-100" alt="">
+            <img src="{{ asset("/uploads/slider/".$panel->file) }}" alt="{{ $panel->title }}">
             <div class="slider-apla">
-                <h2><a href="">Abrahama 14</a></h2>
-                <p>ABRAHAMA 14 to nowy projekt powstający na warszawskim Gocławiu z bezpośrednim widokiem na jezioro Balaton.</p>
-                <a href="" class="bttn bttn-border mt-4">ZOBACZ WIĘCEJ</a>
+                <h2>
+                    @if($panel->link)<a href="{{ $panel->link }}">@endif
+                        {{ $panel->title }}
+                    @if($panel->link)</a>@endif
+                </h2>
+                <p>{{ $panel->text }}</p>
+                @if($panel->link && $panel->link_button)
+                <a href="{{ $panel->link }}" class="bttn bttn-border mt-4">{{ $panel->link_button }}</a>
+                @endif
             </div>
         </li>
+        @endforeach
     </ul>
 </section>
 
@@ -56,7 +64,7 @@
                 <div class="col-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
-                            <img src="https://placehold.co/75x75" alt="">
+                            <img src="{{ asset('/uploads/icons/przyjazne-otoczenie.png') }}" width="75" height="75" alt="Przyjazne otoczenie">
                         </div>
                         <div class="icon-box-text ps-4 pe-5">
                             <h3>Przyjazne otoczenie</h3>
@@ -67,7 +75,7 @@
                 <div class="col-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
-                            <img src="https://placehold.co/75x75" alt="">
+                            <img src="{{ asset('/uploads/icons/bliskosc-komunikacji.png') }}" width="75" height="75" alt="Bliskość komunikacji">
                         </div>
                         <div class="icon-box-text ps-4 pe-5">
                             <h3>Bliskość komunikacji</h3>
@@ -78,7 +86,7 @@
                 <div class="col-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
-                            <img src="https://placehold.co/75x75" alt="">
+                            <img src="{{ asset('/uploads/icons/dostepnosc-infrastruktury.png') }}" width="75" height="75" alt="Dostępność infrastruktury">
                         </div>
                         <div class="icon-box-text ps-4 pe-5">
                             <h3>Dostępność infrastruktury</h3>
@@ -89,7 +97,7 @@
                 <div class="col-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
-                            <img src="https://placehold.co/75x75" alt="">
+                            <img src="{{ asset('/uploads/icons/dostepnosc-edukacji.png') }}" width="75" height="75" alt="Dostępność edukacji">
                         </div>
                         <div class="icon-box-text ps-4 pe-5">
                             <h3>Dostępność edukacji</h3>
@@ -100,7 +108,7 @@
                 <div class="col-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
-                            <img src="https://placehold.co/75x75" alt="">
+                            <img src="{{ asset('/uploads/icons/nowoczesna-architektura.png') }}" width="75" height="75" alt="Nowoczesna architektura">
                         </div>
                         <div class="icon-box-text ps-4 pe-5">
                             <h3>Nowoczesna architektura</h3>
@@ -111,7 +119,7 @@
                 <div class="col-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
-                            <img src="https://placehold.co/75x75" alt="">
+                            <img src="{{ asset('/uploads/icons/wybor-metrazy.png') }}" width="75" height="75" alt="Wybór metraży">
                         </div>
                         <div class="icon-box-text ps-4 pe-5">
                             <h3>Wybór metraży</h3>
@@ -236,21 +244,21 @@
                     <div class="col-4">
                         <div class="border-gradient">
                             <div class="partner-logo">
-                                <img src="https://placehold.co/600x400" alt="">
+                                <img src="{{ asset('/uploads/unibep-logo.png') }}" width="332" height="221" alt="Unibep logo">
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="border-gradient">
                             <div class="partner-logo">
-                                <img src="https://placehold.co/600x400" alt="">
+                                <img src="{{ asset('/uploads/orlik-jantar.png') }}" width="332" height="221" alt="Orlik Jantar logo">
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="border-gradient">
                             <div class="partner-logo">
-                                <img src="https://placehold.co/600x400" alt="">
+                                <img src="{{ asset('/uploads/wsm-ochota-logo.png') }}" width="332" height="221" alt="WSM Ochota logo">
                             </div>
                         </div>
                     </div>
@@ -274,7 +282,7 @@
             <div class="col-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
-                        <img src="https://placehold.co/75x75" alt="">
+                        <img src="{{ asset('/uploads/icons/atrakcyjne-lokalizacje.png') }}" width="75" height="75" alt="Atrakcyjne lokalizacje">
                     </div>
                     <div class="icon-box-text ps-4 pe-5 d-flex align-items-center">
                         <h3>2 ATRAKCYJNE LOKALIZACJE DO WYBORU</h3>
@@ -284,7 +292,7 @@
             <div class="col-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
-                        <img src="https://placehold.co/75x75" alt="">
+                        <img src="{{ asset('/uploads/icons/szeroki-wybor-mieszkan.png') }}" width="75" height="75" alt="Szeroki wybór mieszkań">
                     </div>
                     <div class="icon-box-text ps-4 pe-5 d-flex align-items-center">
                         <h3>SZEROKI WYBÓR MIESZKAŃ</h3>
@@ -294,7 +302,7 @@
             <div class="col-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
-                        <img src="https://placehold.co/75x75" alt="">
+                        <img src="{{ asset('/uploads/icons/zaufani-partnerzy.png') }}" width="75" height="75" alt="Zaufani partnerzy">
                     </div>
                     <div class="icon-box-text ps-4 pe-5 d-flex align-items-center">
                         <h3>ZAUFANI PARTNERZY</h3>
@@ -304,7 +312,7 @@
             <div class="col-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
-                        <img src="https://placehold.co/75x75" alt="">
+                        <img src="{{ asset('/uploads/icons/duze-balkony.png') }}" width="75" height="75" alt="Duże balkony">
                     </div>
                     <div class="icon-box-text ps-4 pe-5 d-flex align-items-center">
                         <h3>DUŻE BALKONY</h3>
@@ -314,7 +322,7 @@
             <div class="col-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
-                        <img src="https://placehold.co/75x75" alt="">
+                        <img src="{{ asset('/uploads/icons/panoramiczne-okna.png') }}" width="75" height="75" alt="Panoramiczne okna">
                     </div>
                     <div class="icon-box-text ps-4 pe-5 d-flex align-items-center">
                         <h3>PANORAMICZNE OKNA</h3>
@@ -324,7 +332,7 @@
             <div class="col-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
-                        <img src="https://placehold.co/75x75" alt="">
+                        <img src="{{ asset('/uploads/icons/dbalosc-o-ergonomie.png') }}" width="75" height="75" alt="Dbałość o ergonomię">
                     </div>
                     <div class="icon-box-text ps-4 pe-5 d-flex align-items-center">
                         <h3>DBAŁOŚĆ O ERGONOMIĘ</h3>
@@ -489,6 +497,15 @@
 @endif
 <script type="text/javascript">
     $(document).ready(function(){
+        $('#slider ul').responsiveSlides({
+                auto:true,
+                pager:true,
+                nav:true,
+                timeout:9000,
+                random:false,
+                speed: 500
+            });
+
         @if(settings()->get("popup_status") == 1)
             const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
                 keyboard: false

@@ -23,16 +23,11 @@
                     <div class="row">
                         <div class="col-12">
                             @include('form-elements.html-select', ['label' => 'Status', 'name' => 'active', 'selected' => $entry->active, 'select' => ['1' => 'Aktywny', '2' => 'Nieaktywny']])
-                            @include('form-elements.html-select', ['label' => 'Wyciemnienie zdjęcia', 'name' => 'opacity', 'selected' => $entry->opacity, 'select' => [
-                                '0' => '0',
-                                '0.2' => '0.2',
-                                '0.4' => '0.4',
-                                '0.6' => '0.6',
-                                '0.8' => '0.8',
-                                '1.0' => '1',
-                            ]])
                             @include('form-elements.html-input-text', ['label' => 'Nazwa', 'name' => 'title', 'value' => $entry->title, 'required' => 1])
-                            @include('form-elements.html-input-file', ['label' => 'Zdjęcie', 'sublabel' => '(wymiary: '.config('images.slider_big.width').'px / '.config('images.slider_big.height').'px)', 'name' => 'file'])
+                            @include('form-elements.html-input-text', ['label' => 'Tekst', 'name' => 'text', 'value' => $entry->text, 'required' => 1])
+                            @include('form-elements.html-input-text', ['label' => 'Button - link', 'name' => 'link', 'value' => $entry->link])
+                            @include('form-elements.html-input-text', ['label' => 'Button - text', 'name' => 'link_button', 'value' => $entry->link_button])
+                            @include('form-elements.html-input-file', ['label' => 'Zdjęcie', 'sublabel' => '(wymiary: '.config('images.slider.big_width').'px / '.config('images.slider.big_height').'px)', 'name' => 'file'])
                             @include('form-elements.html-input-text', ['label' => 'Atrybut ALT zdjęcia', 'name' => 'file_alt', 'value' => $entry->file_alt])
                         </div>
                     </div>

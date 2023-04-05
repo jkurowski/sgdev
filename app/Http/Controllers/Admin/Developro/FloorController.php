@@ -91,8 +91,8 @@ class FloorController extends Controller
     public function copy(Investment $investment, Floor $floor)
     {
         $newFloor = $floor->replicate();
-        $newFloor->html = '';
-        $newFloor->cords = '';
+        //$newFloor->html = '';
+        //$newFloor->cords = '';
         $newFloor->file = '';
         $newFloor->file_webp = '';
         $newFloor->name = $floor->name.' - kopia';
@@ -104,8 +104,8 @@ class FloorController extends Controller
             foreach($floor->properties as $p) {
                 $newProperty = $p->replicate();
                 $newProperty->name = $p->name.' - kopia';
-                $newProperty->html = '';
-                $newProperty->cords = '';
+                //$newProperty->html = '';
+                //$newProperty->cords = '';
                 $newProperty->file = '';
                 $newProperty->file_webp = '';
                 $newProperty->file_pdf = '';
