@@ -68,21 +68,21 @@
                     <div class="invest-cta">
                         <div class="row">
                             <div class="col-5">
-                                <a href=""><img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-radarowa.jpg" alt=""></a>
+                                <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}"><img src="/uploads/box/project-radarowa.jpg" alt=""></a>
                             </div>
                             <div class="col-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
                                     <div class="invest-cta-text">
-                                        <h2><a href="">Radarowa</a></h2>
+                                        <h2><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Radarowa</a></h2>
                                         <ul class="mb-0 list-unstyled mt-4">
                                             <li>
-                                                Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
+                                                Oddanie inwestycji: <span class="float-end">-</span>
                                             </li>
                                             <li>
-                                                DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
+                                                DOSTĘPNYCH MIESZKAŃ: <span class="float-end">-</span>
                                             </li>
                                         </ul>
-                                        <a href="" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
+                                        <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
                                     </div>
                                 </div>
                             </div>
@@ -93,12 +93,12 @@
                     <div class="invest-cta">
                         <div class="row">
                             <div class="col-5">
-                                <a href=""><img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-abrahama.jpg" alt=""></a>
+                                <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}"><img src="/uploads/box/project-abrahama.jpg" alt=""></a>
                             </div>
                             <div class="col-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
                                     <div class="invest-cta-text">
-                                        <h2><a href="">Abrahama</a></h2>
+                                        <h2><a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">Abrahama</a></h2>
                                         <ul class="mb-0 list-unstyled mt-4">
                                             <li>
                                                 Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
@@ -107,7 +107,7 @@
                                                 DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
                                             </li>
                                         </ul>
-                                        <a href="" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
+                                        <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
                                     </div>
                                 </div>
                             </div>

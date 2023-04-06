@@ -66,7 +66,7 @@
                         <div class="col-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
-                                    <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/icons-2/1.png" alt="">
+                                    <img src="/uploads/about/1.png" alt="2 atrakcyjne lokalizacje do wyboru">
                                 </div>
                                 <div class="icon-box-text ps-4 pe-3 d-flex align-items-center">
                                     <p>2 atrakcyjne lokalizacje do wyboru</p>
@@ -76,7 +76,7 @@
                         <div class="col-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
-                                    <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/icons-2/2.png" alt="">
+                                    <img src="/uploads/about/2.png" alt="Szeroki wybór mieszkań">
                                 </div>
                                 <div class="icon-box-text ps-4 pe-3 d-flex align-items-center">
                                     <p>Szeroki wybór mieszkań</p>
@@ -86,7 +86,7 @@
                         <div class="col-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
-                                    <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/icons-2/3.png" alt="">
+                                    <img src="/uploads/about/3.png" alt="Zaufani partnerzy">
                                 </div>
                                 <div class="icon-box-text ps-4 pe-3 d-flex align-items-center">
                                     <p>Zaufani partnerzy</p>
@@ -96,7 +96,7 @@
                         <div class="col-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
-                                    <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/icons-2/4.png" alt="">
+                                    <img src="/uploads/about/4.png" alt="Duże balkony">
                                 </div>
                                 <div class="icon-box-text ps-4 pe-3 d-flex align-items-center">
                                     <p>Duże balkony</p>
@@ -106,7 +106,7 @@
                         <div class="col-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
-                                    <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/icons-2/5.png" alt="">
+                                    <img src="/uploads/about/5.png" alt="Panoramiczne okna">
                                 </div>
                                 <div class="icon-box-text ps-4 pe-3 d-flex align-items-center">
                                     <p>Panoramiczne okna</p>
@@ -116,7 +116,7 @@
                         <div class="col-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
-                                    <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/icons-2/6.png" alt="">
+                                    <img src="/uploads/about/6.png" alt="Dbałość o ergonomię">
                                 </div>
                                 <div class="icon-box-text ps-4 pe-3 d-flex align-items-center">
                                     <p>Dbałość o ergonomię</p>
@@ -158,21 +158,21 @@
                     <div class="invest-cta">
                         <div class="row">
                             <div class="col-5">
-                                <a href=""><img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-radarowa.jpg" alt=""></a>
+                                <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}"><img src="/uploads/box/project-radarowa.jpg" alt=""></a>
                             </div>
                             <div class="col-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
                                      <div class="invest-cta-text">
-                                         <h2><a href="">Radarowa</a></h2>
+                                         <h2><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Radarowa</a></h2>
                                          <ul class="mb-0 list-unstyled mt-4">
                                              <li>
-                                                 Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
+                                                 Oddanie inwestycji: <span class="float-end">-</span>
                                              </li>
                                              <li>
-                                                 DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
+                                                 DOSTĘPNYCH MIESZKAŃ: <span class="float-end">-</span>
                                              </li>
                                          </ul>
-                                         <a href="" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
+                                         <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
                                     </div>
                                 </div>
                             </div>
@@ -183,12 +183,12 @@
                     <div class="invest-cta">
                         <div class="row">
                             <div class="col-5">
-                                <a href=""><img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-abrahama.jpg" alt=""></a>
+                                <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}"><img src="/uploads/box/project-abrahama.jpg" alt=""></a>
                             </div>
                             <div class="col-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
                                     <div class="invest-cta-text">
-                                        <h2><a href="">Abrahama</a></h2>
+                                        <h2><a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">Abrahama</a></h2>
                                         <ul class="mb-0 list-unstyled mt-4">
                                             <li>
                                                 Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
@@ -197,7 +197,7 @@
                                                 DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
                                             </li>
                                         </ul>
-                                        <a href="" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
+                                        <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@
             <div class="row row-apla">
                 <div class="col-6">
                     <div class="contact-text">
-                        <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/logo-sg.png" alt="">
+                        <img src="/images/logo-sg.png" alt="">
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <h2>Siedziba firmy</h2>

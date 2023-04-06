@@ -14,6 +14,202 @@
             <img src="{{ asset('/investment/header/'.$investment->file_header) }}" alt="{{ $investment->name }}" class="w-100">
         </div>
     @endif
+    @if($investment->id == 1)
+    <section id="investDesc">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                    <div class="pe-5">
+                        <p><strong>ABRAHAMA 14 to nowy projekt powstający na warszawskim Gocławiu z bezpośrednim widokiem na jezioro Balaton. </strong></p>
+                        <p>&nbsp;</p>
+                        <p>Elegancki, subtelny budynek wtapia się w otoczenie, podnosząc tym samym walory estetyczne najbliższej okolicy.</p>
+                        <p>&nbsp;</p>
+                        <p>Na 8 kondygnacjach zaprojektowanych zostało 67 mieszkań wraz z podziemnymi miejscami parkingowymi. Na parterze budynku zlokalizowane są lokale usługowe.</p>
+                        <div class="row mt-5 mb-5">
+                            <div class="col-4">
+                                <div class="gradient-border p-4">
+                                    <div class="box">
+                                        <h4 class="label-title">67</h4>
+                                        <p>Mieszkań na 8 <br>kondygnacjach</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="gradient-border p-4">
+                                    <div class="box">
+                                        <h4 class="label-title">37-96 m<sup>2</sup></h4>
+                                        <p>Różnorodne <br>metraże</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="gradient-border p-4">
+                                    <div class="box">
+                                        <h4 class="label-title">Q4 2024</h4>
+                                        <p>Oddanie <br>inwestycji</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p><strong>Budynek ABRAHAMA 14 został zaprojektowany z dbałością o każdy szczegół. Projekt odznacza się niebanalną architekturą, oryginalnymi rozwiązaniami i nowoczesnym designem.</strong></p>
+                        <p>&nbsp;</p>
+                        <p>Elegancki, subtelny budynek wtapia się w otoczenie, podnosząc tym samym walory estetyczne najbliższej okolicy.</p>
+                        <p>&nbsp;</p>
+                        <p>Na 8 kondygnacjach zaprojektowanych zostało 67 mieszkań wraz z podziemnymi miejscami parkingowymi. Na parterze budynku zlokalizowane są lokale usługowe.</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="{{ asset('/uploads/abrahama-14-budynek.jpg') }}" alt="Wizualizacja budynku, w tle zielone tereny">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="investFeatures" class="bg-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="icon-box icon-box-white d-flex mt-0">
+                        <div class="icon-box-img">
+                            <img src="{{ asset('/uploads/abrahama/komunikacja-miejska.png') }}" alt="Przyjazne otoczenie" width="70" height="70">
+                        </div>
+                        <div class="icon-box-text ps-4 pe-5">
+                            <h3>2 minuty</h3>
+                            <p>do przystanku komunikacji miejskiej</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="icon-box icon-box-white d-flex mt-0">
+                        <div class="icon-box-img">
+                            <img src="{{ asset('/uploads/abrahama/latwy-dojazd.png') }}" alt="Przyjazne otoczenie" width="70" height="70">
+                        </div>
+                        <div class="icon-box-text ps-4 pe-5">
+                            <h3>Łatwy dojazd</h3>
+                            <p>do obwodnicy Warszawy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="icon-box icon-box-white d-flex mt-0">
+                        <div class="icon-box-img">
+                            <img src="{{ asset('/uploads/abrahama/edukacja-icon.png') }}" alt="Przyjazne otoczenie" width="70" height="70">
+                        </div>
+                        <div class="icon-box-text ps-4 pe-5">
+                            <h3>Szkoły i przedszkola</h3>
+                            <p>- w okolicy inwestycji</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="icon-box icon-box-white d-flex mt-0">
+                        <div class="icon-box-img">
+                            <img src="{{ asset('/uploads/abrahama/sport-icon.png') }}" alt="Przyjazne otoczenie" width="70" height="70">
+                        </div>
+                        <div class="icon-box-text ps-4 pe-5">
+                            <h3>Tereny rekreacyjne</h3>
+                            <p>- obiekty rozrywkowe i sportowe w pobliżu osiedla</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="investLocation">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="{{ asset('/uploads/abrahama/lokalizacja.jpg') }}" alt="Lokalizacja inwestycji" width="964" height="799">
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                    <div class="ps-5">
+                        <h2 class="mb-4">LOKALIZACJA</h2>
+                        <p><strong>Mieszkania na warszawskim Gocławiu z bezpośrednim widokiem na jezioro Balaton.</strong></p>
+                        <p>&nbsp;</p>
+                        <p>Najbliższa okolica obfituje dużą ilością terenów zielonych. ABRAHAMA 14 sąsiaduje z tętniącą życiem tamtejszych restauracji i kawiarenek Saską Kępą.</p>
+                        <p>&nbsp;</p>
+                        <p>Lokalizacja jest także świetnie skomunikowana z większymi arteriami komunikacyjnymi, co pozwala uniknąć korków. ABRAHAMA 14 to projekt dedykowany miłośnikom życia w mieście, elegancji i nowoczesnej architektury.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <img src="{{ asset('/uploads/abrahama/mapa.jpg') }}" width="1920" height="983" alt="Mapa lokalizacji" class="w-100">
+
+    <section id="investMapLegend">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-2">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/sklepy-i-centra-handlowe.png') }}" alt="">
+                        <p>Sklepy i centra handlowe</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/szkoly-przedszkola-i-zlobki.png') }}" alt="">
+                        <p>Szkoły</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/przedszkola-i-zlobki.png') }}" alt="">
+                        <p>Przedszkola i żłobki</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/metro.png') }}" alt="">
+                        <p>Planowana linia metra</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/przystanki-autobusowe.png') }}" alt="">
+                        <p>Przystanki autobusowe</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/sport-rekreacja-i-place-zabaw.png') }}" alt="">
+                        <p>Sport i rekreacja</p>
+                    </div>
+                </div>
+                <div class="col-2 mt-5">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/place-zabaw.png') }}" alt="">
+                        <p>Place zabaw</p>
+                    </div>
+                </div>
+                <div class="col-2 mt-5">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/restauracje-i-kawiarnie.png') }}" alt="">
+                        <p>Restauracje i kawiarnie</p>
+                    </div>
+                </div>
+                <div class="col-2 mt-5">
+                    <div class="legend">
+                        <img src="{{ asset('/uploads/abrahama/markers/apteki-przychodnie-i-szpitale.png') }}" alt="">
+                        <p>Apteki, przychodnie i szpitale</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="investGallery">
+        <div class="container">
+            <div class="col-12">
+                {!! parse_text('[galeria=gallery]2[/galeria]') !!}
+            </div>
+        </div>
+    </section>
+    @endif
+
     @if($investment->contact_form)
     <section id="contact">
         <div class="container">

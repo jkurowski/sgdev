@@ -1,6 +1,6 @@
 @if($list->count() > 0)
 <div id="photos-list" class="container">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
         @foreach ($list as $p)
         <div class="col-6">
             <div class="col-gallery-thumb">
@@ -13,7 +13,7 @@
                     <div><i class="las la-search-plus"></i></div>
                 </a>
             </div>
-            </div>
+        </div>
         @endforeach
     </div>
 </div>

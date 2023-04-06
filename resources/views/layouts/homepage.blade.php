@@ -134,27 +134,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <a href="">
+                    <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">
                         <div class="main-invest">
                             <div class="main-invest-title">
                                 <h2>Radarowa</h2>
                             </div>
                             <div class="main-invest-logo">
-                                <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-logo-radarowa.png" alt="">
+                                <img src="/uploads/box/project-logo-radarowa.png" alt="">
                             </div>
                             <div class="main-invest-map">
-                                <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-map-wlochy.png" alt="">
+                                <img src="/uploads/box/project-map-wlochy.png" alt="">
                             </div>
                             <div class="main-invest-thumb">
-                                <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-radarowa.jpg" alt="">
+                                <img src="/uploads/box/project-radarowa.jpg" alt="">
                             </div>
                             <div class="main-invest-desc">
                                 <ul class="mb-0 list-unstyled">
                                     <li>
-                                        Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
+                                        Oddanie inwestycji: <span class="float-end">-</span>
                                     </li>
                                     <li>
-                                        DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
+                                        DOSTĘPNYCH MIESZKAŃ: <span class="float-end">-</span>
                                     </li>
                                 </ul>
                             </div>
@@ -165,19 +165,19 @@
                     </a>
                 </div>
                 <div class="col-4">
-                    <a href="">
+                    <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">
                         <div class="main-invest">
                             <div class="main-invest-title">
                                 <h2>Abrahama</h2>
                             </div>
                             <div class="main-invest-logo">
-                                <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-logo-abrahama.png" alt="">
+                                <img src="/uploads/box/project-logo-abrahama.png" alt="">
                             </div>
                             <div class="main-invest-map">
-                                <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-map-goclaw.png" alt="">
+                                <img src="/uploads/box/project-map-goclaw.png" alt="">
                             </div>
                             <div class="main-invest-thumb">
-                                <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-abrahama.jpg" alt="">
+                                <img src="/uploads/box/project-abrahama.jpg" alt="">
                             </div>
                             <div class="main-invest-desc">
                                 <ul class="mb-0 list-unstyled">
@@ -395,7 +395,7 @@
         <div class="row row-apla">
             <div class="col-6">
                 <div class="contact-text">
-                    <img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/logo-sg.png" alt="">
+                    <img src="/images/logo-sg.png" alt="">
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
                     <h2>Siedziba firmy</h2>
