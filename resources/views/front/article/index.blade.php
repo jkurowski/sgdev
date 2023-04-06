@@ -55,7 +55,7 @@
                     <h4>ZOBACZ NASZE DOTYCHCZASOWE <span>REALIZACJE</span></h4>
                 </div>
                 <div class="col-3">
-                    <a href="" class="bttn bttn-border">Zrealizowane inwestycje</a>
+                    <a href="{{ route('completed') }}" class="bttn bttn-border">Zrealizowane inwestycje</a>
                 </div>
             </div>
         </div>

@@ -1,103 +1,20 @@
 @extends('layouts.page', ['body_class' => 'no-top no-bottom land-page'])
 
-@section('meta_title', $page->title)
-@section('seo_title', $page->meta_title)
-@section('seo_description', $page->meta_description)
+@section('meta_title', $investment->name)
+@section('seo_title', $investment->meta_title)
+@section('seo_description', $investment->meta_description)
 
 @section('pageheader')
-    @include('layouts.partials.page-header', ['page' => $page, 'header_file' => 'jak-kupic.jpg'])
+    @include('layouts.partials.developro-header', ['page' => $page, 'investment' => $investment, 'header_file' => 'jak-kupic.jpg'])
 @stop
 
 @section('content')
-    <div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-6 d-flex align-items-center justify-content-center">
-                <div class="block-text">
-                    {!! parse_text($page->content) !!}
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="block-img">
-                    <picture>
-                        <source type="image/webp" srcset="{{ asset('/uploads/kupimy-grunty.webp') }}">
-                        <source type="image/jpeg" srcset="{{ asset('/uploads/kupimy-grunty.jpg') }}">
-                        <img src="{{ asset('/uploads/kupimy-grunty.jpg') }}" alt="Widok budynku, zielone otoczenia, ludzie" width="960" height="680">
-                    </picture>
-                </div>
-            </div>
+    @if($investment->file_header)
+        <div id="investHeader">
+            <img src="{{ asset('/investment/header/'.$investment->file_header) }}" alt="{{ $investment->name }}" class="w-100">
         </div>
-    </div>
-
-    <div id="cta" class="m-0 bg-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-9 d-flex align-items-center">
-                    <h4>ZOBACZ NASZE DOTYCHCZASOWE <span>REALIZACJE</span></h4>
-                </div>
-                <div class="col-3">
-                    <a href="{{ route('completed') }}" class="bttn bttn-border">Zrealizowane inwestycje</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="investCTA">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div class="invest-cta">
-                        <div class="row">
-                            <div class="col-5">
-                                <a href=""><img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-radarowa.jpg" alt=""></a>
-                            </div>
-                            <div class="col-7 d-flex align-items-center justify-content-center">
-                                <div class="invest-cta-text ps-4 pe-5 w-100">
-                                    <div class="invest-cta-text">
-                                        <h2><a href="">Radarowa</a></h2>
-                                        <ul class="mb-0 list-unstyled mt-4">
-                                            <li>
-                                                Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
-                                            </li>
-                                            <li>
-                                                DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
-                                            </li>
-                                        </ul>
-                                        <a href="" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="invest-cta">
-                        <div class="row">
-                            <div class="col-5">
-                                <a href=""><img src="https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/project-abrahama.jpg" alt=""></a>
-                            </div>
-                            <div class="col-7 d-flex align-items-center justify-content-center">
-                                <div class="invest-cta-text ps-4 pe-5 w-100">
-                                    <div class="invest-cta-text">
-                                        <h2><a href="">Abrahama</a></h2>
-                                        <ul class="mb-0 list-unstyled mt-4">
-                                            <li>
-                                                Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
-                                            </li>
-                                            <li>
-                                                DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
-                                            </li>
-                                        </ul>
-                                        <a href="" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @endif
+    @if($investment->contact_form)
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -189,4 +106,5 @@
             </div>
         </div>
     </section>
+    @endif
 @endsection

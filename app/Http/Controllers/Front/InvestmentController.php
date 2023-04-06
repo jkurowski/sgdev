@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Investment;
+use App\Models\RodoRules;
 use Illuminate\Http\Request;
 
 // CMS
@@ -21,10 +23,18 @@ class InvestmentController extends Controller
         $this->pageId = 2;
     }
 
-    public function show(Request $request)
-    {
+    public function index($slug) {
 
-        $investment = $this->repository->find(1);
+        return view('front.investment.index', [
+            'rules' => RodoRules::orderBy('sort')->whereStatus(1)->get(),
+            'investment' => $this->repository->findBySlug($slug),
+            'page' => Page::where('id', $this->pageId)->first(),
+        ]);
+    }
+
+    public function show($slug, Request $request)
+    {
+        $investment = $this->repository->findBySlug($slug);
         $investment_room = $investment->load(array(
             'floorRooms' => function ($query) use ($request) {
                 //$query->orderBy('highlighted', 'DESC');

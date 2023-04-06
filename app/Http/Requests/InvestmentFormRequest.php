@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
 
 class InvestmentFormRequest extends FormRequest
 {
@@ -27,6 +28,7 @@ class InvestmentFormRequest extends FormRequest
             'type' => 'integer',
             'status' => 'integer',
             'name' => 'required|string|min:5|max:100',
+            'contact_form' => 'boolean',
             'address' => '',
             'city' => '',
             'date_start' => '',

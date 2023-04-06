@@ -388,6 +388,7 @@ header nav ul li {
   align-items: center;
   margin-left: 30px;
   line-height: normal;
+  position: relative;
 }
 header nav ul li a {
   color: var(--main-color-blue);
@@ -400,6 +401,58 @@ header nav ul li a {
 }
 header nav ul li a:hover {
   color: var(--main-color-orange);
+}
+header nav ul li:hover ul.submenu {
+  top: 100%;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+header nav ul li:hover a {
+  color: var(--main-color-orange);
+}
+header nav ul.submenu {
+  position: absolute;
+  left: 0;
+  top: 120%;
+  right: 0;
+  background: #e77427;
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  transition: all 100ms linear;
+  visibility: hidden;
+  opacity: 0;
+}
+header nav ul.submenu:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(231, 116, 39, 0);
+  border-bottom-color: #e77427;
+  border-width: 5px;
+  margin-left: -5px;
+}
+header nav ul.submenu li {
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+header nav ul.submenu li:last-child {
+  border-bottom: 0;
+}
+header nav ul.submenu li a {
+  color: white;
+  display: block;
+  padding: 10px 30px;
+  width: 100%;
+}
+header nav ul.submenu li a:hover {
+  background: #bd5b1a;
 }
 .header-holder {
   height: 84px;
@@ -1506,6 +1559,7 @@ section {
 #page-header .breadcrumb li,
 #page-header .breadcrumb a {
   color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
 }
 #page-header .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
   color: var(--main-color-orange);
@@ -1769,32 +1823,59 @@ html.swipebox-html.swipebox-touch {
   background: #000000;
   background: rgba(0, 0, 0, 0.9);
 }
-#swipebox-prev:before,
-#swipebox-next:before,
-#swipebox-close:before {
-  font-family: 'FontAwesome';
-  font-size: 50px;
-  color: #afafaf;
-  background-image: none !important;
+#swipebox-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#swipebox-close i {
+  font-size: 37px;
+  color: var(--main-color-orange);
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+#swipebox-close:hover i {
+  color: white;
+}
+#swipebox-next.disabled,
+#swipebox-prev.disabled {
+  opacity: 0.1;
+}
+#swipebox-next,
+#swipebox-prev {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: var(--main-color-orange);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-#swipebox-prev:hover:before,
-#swipebox-next:hover:before,
-#swipebox-close:hover:before {
-  color: #fff;
+#swipebox-next i,
+#swipebox-prev i {
+  font-size: 32px;
+  color: white;
 }
-#swipebox-prev:before {
-  float: left;
-  content: "\f053";
+#swipebox-next {
+  right: 30px;
 }
-#swipebox-next:before {
-  float: right;
-  content: "\f054";
+#swipebox-prev {
+  left: 30px;
 }
-#swipebox-close:before {
-  float: right;
-  content: "\f00d";
-  font-size: 30px;
+#swipebox-next:hover,
+#swipebox-prev:hover {
+  background: white;
+}
+#swipebox-next:hover i,
+#swipebox-prev:hover i {
+  color: var(--main-color-orange);
 }
 #swipebox-slider .slide img {
   background: white;

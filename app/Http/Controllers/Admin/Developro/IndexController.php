@@ -55,6 +55,10 @@ class IndexController extends Controller
             $this->service->uploadThumb($request->name, $request->file('file'), $investment);
         }
 
+        if ($request->hasFile('file_header')) {
+            $this->service->uploadHeader($request->name, $request->file('file_header'), $investment);
+        }
+
         return redirect(route('admin.developro.index'))->with('success', 'Inwestycja zapisana');
     }
 
@@ -74,6 +78,10 @@ class IndexController extends Controller
 
         if ($request->hasFile('file')) {
             $this->service->uploadThumb($request->name, $request->file('file'), $investment, true);
+        }
+
+        if ($request->hasFile('file_header')) {
+            $this->service->uploadHeader($request->name, $request->file('file_header'), $investment, true);
         }
 
         return redirect(route('admin.developro.index'))->with('success', 'Inwestycja zaktualizowana');

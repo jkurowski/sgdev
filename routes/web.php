@@ -41,15 +41,18 @@ Route::middleware(['restrictIp'])->group(function () {
         'Front\ContactController@send')->name('contact.send');
 
     // Developro
-    Route::group(['namespace' => 'Front', 'prefix'=>'/mieszkania', 'as' => 'front.investment.'], function() {
+    Route::group(['namespace' => 'Front', 'prefix'=>'/i', 'as' => 'front.investment.'], function() {
 
-        Route::get('/',
-            'InvestmentController@show')->name('show');
+        Route::get('/{slug}',
+            'InvestmentController@index')->name('show');
 
-        Route::get('/pietro/{floor}',
+        Route::get('/{slug}/plan',
+            'InvestmentController@show')->name('plan');
+
+        Route::get('/{slug}/pietro/{floor}',
             'InvestmentFloorController@index')->name('floor.index');
 
-        Route::get('/pietro/{floor}/m/{property}',
+        Route::get('/{slug}/pietro/{floor}/m/{property}',
             'InvestmentPropertyController@index')->name('property.index');
     });
 

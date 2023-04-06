@@ -40,6 +40,14 @@
                                     '3' => 'Inwestycja planowana',
                                     '4' => 'Inwestycja ukryta'
                             ]])
+                            @include('form-elements.html-select', [
+                                'label' => 'Formularz kontaktowy',
+                                'name' => 'contact_form',
+                                'selected' => $entry->contact_form,
+                                'select' => [
+                                    1 => 'Tak',
+                                    0 => 'Nie'
+                            ]])
                             @include('form-elements.html-input-text', ['label' => 'Nazwa inwestycji', 'name' => 'name', 'value' => $entry->name, 'required' => 1])
                             @include('form-elements.html-input-text', ['label' => 'Adres inwestycji', 'name' => 'address', 'value' => $entry->address])
                             @include('form-elements.html-input-text', ['label' => 'Miasto inwestycji', 'name' => 'city', 'value' => $entry->city])
@@ -52,7 +60,8 @@
                             @include('form-elements.html-input-text-count', ['label' => 'Opis strony', 'sublabel'=> 'Meta tag - description', 'name' => 'meta_description', 'value' => $entry->meta_description, 'maxlength' => 158])
                             @include('form-elements.html-input-text', ['label' => 'Indeksowanie', 'sublabel'=> 'Meta tag - robots', 'name' => 'meta_robots', 'value' => $entry->meta_robots])
                             @include('form-elements.html-input-text', ['label' => 'Krótki opis na liście', 'name' => 'entry_content', 'value' => $entry->entry_content])
-                            @include('form-elements.html-input-file', ['label' => 'Miniaturka', 'sublabel' => '(wymiary: '.config('images.investment_thumb.width').'px / '.config('images.investment_thumb.height').'px)', 'name' => 'file'])
+                            @include('form-elements.html-input-file', ['label' => 'Miniaturka', 'sublabel' => '(wymiary: '.config('images.investment.thumb_width').'px / '.config('images.investment.thumb_height').'px)', 'name' => 'file'])
+                            @include('form-elements.html-input-file', ['label' => 'Obrazek nagłówka', 'sublabel' => '(wymiary: '.config('images.investment.header_width').'px / '.config('images.investment.header_height').'px)', 'name' => 'file_header'])
                             @include('form-elements.textarea-fullwidth', ['label' => 'Opis inwestycji', 'name' => 'content', 'value' => $entry->content, 'rows' => 11, 'class' => 'tinymce', 'required' => 1])
                             @include('form-elements.textarea-fullwidth', ['label' => 'Opis inwestycji po zakończeniu', 'name' => 'end_content', 'value' => $entry->end_content, 'rows' => 11, 'class' => 'tinymce'])
                         </div>

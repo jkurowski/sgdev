@@ -36,6 +36,13 @@ class BaseRepository implements EloquentRepositoryInterface
         }
         return $entry;
     }
+    public function findBySlug($slug): ?Model
+    {
+        if (null == $entry = $this->model->whereSlug($slug)->firstOrfail() ) {
+            throw new ModelNotFoundException("Entry not found");
+        }
+        return $entry;
+    }
 
     public function create(array $attributes): Model
     {
