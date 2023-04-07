@@ -11,7 +11,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <div class="completed-text position-sticky">
                     <div class="gradient-border mb-5">
                         <div class="section-title text-start mb-4">
@@ -30,8 +30,8 @@
                     <p> Budynek został zrealizowany z dbałością o każdy szczegół. Eleganckie części wspólne utrzymane w nowoczesnej stylistyce spełniają oczekiwania najbardziej wymagających. Wykorzystane zostały szlachetne materiały najwyższej jakości, w nowoczesnym połączeniu szarości, drewna i zieleni. Inwestycja jest znakomicie zlokalizowana i skomunikowana z każdą dzielnicą Warszawy. W okolicy znajdują się liczne szkoły, przedszkola, sklepy, ośrodki kultury oraz sportu. Otoczenie pełne zieleni i sąsiedztwo kilku parków zachęca do aktywnego trybu życia.</p>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="completed-img">
+            <div class="col-12 col-xl-6">
+                <div class="completed-img mt-4 mt-xl-0">
                     {!! parse_text('[galeria=gallery]1[/galeria]') !!}
                 </div>
             </div>

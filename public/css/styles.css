@@ -2098,115 +2098,141 @@ html.swipebox-html.swipebox-touch {
 .openmenu #triggermenu:before {
   content: "\f00d";
 }
-@media (max-width: 1729.98px) {
-  header {
-    padding: 40px 0 0 15px;
+@media (max-width: 1669.98px) {
+  header .h-100 {
+    padding-left: 0 !important;
   }
-  header .header-menu li:last-child {
-    margin-right: 15px;
+  #investCTA li {
+    font-size: 14px;
   }
-  header.fixed {
-    padding: 10px 0 10px 10px;
+  #investCTA li:first-child {
+    padding-bottom: 5px;
+    margin-bottom: 0;
   }
-  header .col-lg-2 {
-    flex: 0 0 auto;
-    width: 120px;
-  }
-  header .col-lg-10 {
-    flex: 0 0 auto;
-    width: calc(100% - 120px);
-  }
-}
-@media (max-width: 1632px) {
-  #page ul.programs.jesion-programs li .desc p {
-    font-size: 15px;
-    line-height: 25px;
-  }
-}
-@media (max-width: 1449.98px) {
-  #howtobuy .container {
-    padding: 0 30px;
-  }
-  #mainwhy .why-carousel-apla h2 {
-    font-size: 20px;
-  }
-  #mainwhy .why-carousel-apla p {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-/* end of 1479.98 */
-@media (max-width: 1529.98px) {
-  header .header-menu li {
-    margin-right: 24px;
-  }
-  header .header-menu li a {
-    font-size: 15px;
-  }
-  header .header-menu .header-cta a {
-    padding: 0 20px 0 45px;
-    font-size: 15px;
-  }
-  header .header-menu .submenu {
-    width: 250px;
-  }
-}
-@media (max-width: 1399.98px) {
-  #page ul.programs.jesion-programs li .desc p {
-    font-size: 15px;
-    line-height: 20px;
+  #investCTA ul,
+  #investCTA .bttn {
+    margin-top: 10px !important;
   }
 }
 @media (max-width: 1389.98px) {
-  header {
-    padding: 20px 20px 0;
+  footer p {
+    line-height: 22px;
   }
-  header li.header-cta {
-    margin-right: 0;
+  footer p br {
+    display: none;
   }
-  #pagecontent header #logo img,
-  header #logo img {
-    width: 100px;
-  }
-  #page-header {
-    height: 320px;
-  }
-  #page-header h1 {
-    font-size: 80px;
-    margin-bottom: 0;
-  }
-  #page-header .breadcrumb {
-    margin-bottom: 30px;
-  }
-  #maincontact .maincontact-row .maincontact-item {
-    padding: 40px 30px;
-  }
-  #maincontact .maincontact-row a {
-    font-size: 30px;
-  }
-  #maininvestor .maininvestor-text {
-    padding-left: 20px;
-  }
-  #maininvestor .maininvestor-text img {
-    width: 149px;
-    margin-bottom: 15px;
-  }
-  #maininvestor .maininvestor-text h2 {
-    font-size: 37px;
-    margin-bottom: 15px;
-  }
-  #maininvestor .maininvestor-text p {
+  .block-text p,
+  .block-text li {
     font-size: 16px;
     line-height: 25px;
   }
-  #swipebox-close {
-    top: 70px;
+}
+@media (max-width: 1199.98px) {
+  #page {
+    padding: 60px 0;
+  }
+  footer p {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .contact-box {
+    padding: 30px 15px;
+  }
+  .contact-box .contact-icon {
+    height: 75px;
+    width: 75px;
+  }
+  .contact-box p {
+    font-size: 15px;
+  }
+  .contact-box h3 {
+    font-size: 26px;
+  }
+  #page-header {
+    padding: 40px 0;
   }
 }
 /* end of 1199.98 */
+@media (max-width: 991.98px) {
+  .block-text {
+    padding: 30px;
+  }
+  section {
+    padding: 50px 0;
+  }
+}
 /* end of 991.98 */
+@media (max-width: 767.98px) {
+  #page-header {
+    padding: 20px 0;
+  }
+  footer {
+    padding: 30px 0;
+  }
+  .invest-cta-text {
+    padding: 30px 0 !important;
+  }
+}
 /* end of 767.98 */
+@media (max-width: 575.98px) {
+  #page {
+    padding: 30px 15px;
+  }
+  #page-header h1 {
+    margin: 0;
+  }
+  #page-header .breadcrumb {
+    display: none;
+  }
+  footer {
+    padding: 30px 15px;
+  }
+  li,
+  p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .section-title h2 {
+    padding-bottom: 20px;
+  }
+  .section-title span {
+    font-size: 12px;
+  }
+  #contact .row-apla {
+    padding: 30px 15px;
+  }
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .section-title h2:after {
+    width: 210px;
+  }
+  section {
+    padding: 30px 0;
+  }
+  #cta h4 {
+    font-size: 25px;
+  }
+}
 /* end of 575.98 */
+@media (max-width: 480px) {
+  .news-entry {
+    display: block !important;
+  }
+  .news-entry .news-thumb img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .news-entry .news-thumb,
+  .news-entry .news-text {
+    width: 100%;
+    padding: 0 !important;
+    display: block !important;
+  }
+}
 /* end of 359.98 */
 /* end of 359.98 */
 @-webkit-keyframes bs-notify-fadeOut {

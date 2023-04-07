@@ -141,10 +141,10 @@
     <div id="cta" class="m-0 bg-blue">
         <div class="container">
             <div class="row">
-                <div class="col-9 d-flex align-items-center">
+                <div class="col-12 col-lg-8 col-xxl-9 d-flex align-items-center text-center text-lg-start">
                     <h4>ZOBACZ NASZE DOTYCHCZASOWE <span>REALIZACJE</span></h4>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-lg-4 col-xxl-3 text-center text-lg-end mt-4 mt-lg-0">
                     <a href="{{ route('completed') }}" class="bttn bttn-border">Zrealizowane inwestycje</a>
                 </div>
             </div>
@@ -154,51 +154,47 @@
     <section id="investCTA">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <div class="invest-cta">
                         <div class="row">
-                            <div class="col-5">
+                            <div class="col-12 col-md-5">
                                 <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}"><img src="/uploads/box/project-radarowa.jpg" alt=""></a>
                             </div>
-                            <div class="col-7 d-flex align-items-center justify-content-center">
+                            <div class="col-12 col-md-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
-                                     <div class="invest-cta-text">
-                                         <h2><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Radarowa</a></h2>
-                                         <ul class="mb-0 list-unstyled mt-4">
-                                             <li>
-                                                 Oddanie inwestycji: <span class="float-end">-</span>
-                                             </li>
-                                             <li>
-                                                 DOSTĘPNYCH MIESZKAŃ: <span class="float-end">-</span>
-                                             </li>
-                                         </ul>
-                                         <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
-                                    </div>
+                                    <h2><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Radarowa</a></h2>
+                                    <ul class="mb-0 list-unstyled mt-4">
+                                        <li>
+                                            Oddanie inwestycji: <span class="float-end">-</span>
+                                        </li>
+                                        <li>
+                                            DOSTĘPNYCH MIESZKAŃ: <span class="float-end">-</span>
+                                        </li>
+                                    </ul>
+                                    <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                     <div class="invest-cta">
                         <div class="row">
-                            <div class="col-5">
+                            <div class="col-12 col-md-5">
                                 <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}"><img src="/uploads/box/project-abrahama.jpg" alt=""></a>
                             </div>
-                            <div class="col-7 d-flex align-items-center justify-content-center">
+                            <div class="col-12 col-md-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
-                                    <div class="invest-cta-text">
-                                        <h2><a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">Abrahama</a></h2>
-                                        <ul class="mb-0 list-unstyled mt-4">
-                                            <li>
-                                                Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
-                                            </li>
-                                            <li>
-                                                DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
-                                            </li>
-                                        </ul>
-                                        <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
-                                    </div>
+                                    <h2><a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">Abrahama</a></h2>
+                                    <ul class="mb-0 list-unstyled mt-4">
+                                        <li>
+                                            Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
+                                        </li>
+                                        <li>
+                                            DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
+                                        </li>
+                                    </ul>
+                                    <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +215,7 @@
                 </div>
             </div>
             <div class="row row-apla">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="contact-text">
                         <img src="/images/logo-sg.png" alt="">
                         <p>&nbsp;</p>
@@ -233,11 +229,11 @@
                         <p>tel. <a href="tel: +48 607 823 400">+48 607 823 400</a></p>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6 mt-5 mt-md-0">
                     <form method="post" id="homepage-form" action="{{ route('contact.index') }}" class="validateForm">
                         {{ csrf_field() }}
                         <div class="row">
-                            <div class="col-12 col-sm-6 form-input">
+                            <div class="col-12 col-sm-6 col-xl-4 form-input">
                                 <label for="form_name">Imię <span class="text-danger">*</span></label>
                                 <input name="form_name" id="form_name" class="validate[required] form-control @error('form_name') is-invalid @enderror" type="text" value="{{ old('form_name') }}">
 
@@ -245,11 +241,11 @@
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
                             </div>
-                            <div class="col-12 col-sm-6 form-input col-input-important">
+                            <div class="col-12 col-sm-6 col-xl-4 form-input col-input-important">
                                 <label for="form_surname">Nazwisko <span class="text-danger">*</span></label>
                                 <input name="form_surname" id="form_surname" class="form-control" type="text" value="{{ old('form_surname') }}">
                             </div>
-                            <div class="col-12 col-sm-6 form-input">
+                            <div class="col-12 col-sm-6 col-xl-4 form-input">
                                 <label for="form_email">E-mail <span class="text-danger">*</span></label>
                                 <input name="form_email" id="form_email" class="validate[required] form-control @error('form_email') is-invalid @enderror" type="text" value="{{ old('form_email') }}">
 
@@ -257,7 +253,7 @@
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
                             </div>
-                            <div class="col-12 col-sm-6 form-input">
+                            <div class="col-12 col-xl-4 form-input">
                                 <label for="form_phone">Telefon <span class="text-danger">*</span></label>
                                 <input name="form_phone" id="form_phone" class="validate[required] form-control @error('form_phone') is-invalid @enderror" type="text" value="{{ old('form_phone') }}">
 

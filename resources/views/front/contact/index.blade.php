@@ -11,7 +11,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="contact-box">
                     <div class="contact-icon">
                         <i class="las la-map-marked-alt"></i>
@@ -20,7 +20,7 @@
                     <p><a href="" target="_blank">ul. Śliska 3 lok. 1B, 00-127 Warszawa</a></p>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 mt-4 mt-md-0">
                 <div class="contact-box">
                     <div class="contact-icon">
                         <i class="las la-envelope-open-text"></i>
@@ -29,7 +29,7 @@
                     <p><a href="mailto:konto@sgdevelopment.pl">konto@sgdevelopment.pl</a></p>
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                 <div class="contact-box">
                     <div class="contact-icon">
                         <i class="las la-phone"></i>
