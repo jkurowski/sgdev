@@ -1,4 +1,4 @@
-@extends('layouts.page', ['body_class' => 'investments'])
+@extends('layouts.page', ['body_class' => 'investments no-top'])
 
 @section('meta_title', 'Inwestycje - '.$investment->name)
 @section('seo_title', $page->meta_title)
@@ -11,7 +11,6 @@
 @section('content')
     @if($investment->plan)
     <div id="plan-holder">
-        <div class="plan-holder-info">Z planu budynku wybierz piętro lub <a href="#filtr" class="scroll-link" data-offset="90"><b>użyj wyszukiwarki</b></a></div>
         <img src="{{ asset('/investment/plan/'.$investment->plan->file.'') }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan">
         <map name="invesmentplan">
             @foreach($investment->floors as $floor)

@@ -5,23 +5,31 @@
 @section('seo_description', $page->meta_description)
 
 @section('pageheader')
-    @include('layouts.partials.developro-header', ['title' => $property->name, 'header_file' => 'rooms.jpg', 'items' => [['uri'=> 'mieszkania', 'title'=>'Mieszkania'],['uri'=> 'mieszkania/pietro/'.$floor->id, 'title'=>$floor->name]]])
+    @include('layouts.partials.property-header', [
+    'title' => $property->name,
+    'header_file' => 'rooms.jpg',
+    'items' => [
+        ['uri'=> 'i/'.$investment->slug, 'title'=> $investment->name],
+        ['uri'=> 'i/'.$investment->slug.'/pietro/'.$floor->id, 'title'=>$floor->name]
+        ]
+    ])
 @stop
 
 @section('content')
+
 <div id="property">
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-5">
                 <div id="propertyNav" class="row">
                     <div class="col-12 col-sm-4">
-                        @if($prev) <a href="{{route('front.investment.property.index', [$floor, $prev->id])}}" class="bttn">Poprzednie</a>@endif
+                        @if($prev) <a href="{{route('front.investment.property.index', [$investment->slug, $floor, $prev->id])}}" class="bttn">Poprzednie</a>@endif
                     </div>
                     <div class="col-12 col-sm-4">
-                        <a href="{{route('front.investment.floor.index', $floor)}}" class="bttn">Plan piętra</a>
+                        <a href="{{route('front.investment.floor.index', [$investment->slug, $floor])}}" class="bttn">Plan piętra</a>
                     </div>
                     <div class="col-12 col-sm-4">
-                        @if($next) <a href="{{route('front.investment.property.index', [$floor, $next->id])}}" class="bttn">Następne</a>@endif
+                        @if($next) <a href="{{route('front.investment.property.index', [$investment->slug, $floor, $next->id])}}" class="bttn">Następne</a>@endif
                     </div>
                 </div>
                 <div class="property-desc">

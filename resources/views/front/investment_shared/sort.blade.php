@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container d-none">
     <div id="sortList" class="row form-group pt-3 pb-3">
         <div class="col-3">
             <div class="row">

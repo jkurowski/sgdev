@@ -18,9 +18,9 @@ class InvestmentPropertyController extends Controller
         $this->pageId = 2;
     }
 
-    public function index(Investment $investment, Floor $floor, Property $property)
+    public function index($slug, Floor $floor, Property $property)
     {
-
+        $investment = Investment::where('slug', '=', $slug)->firstOrFail();
         $page = Page::where('id', $this->pageId)->first();
 
         return view('front.investment_property.index', [

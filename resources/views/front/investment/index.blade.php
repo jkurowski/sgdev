@@ -15,6 +15,15 @@
         </div>
     @endif
     @if($investment->id == 1)
+    <nav id="investNav" class="position-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="{{ route('front.investment.plan', $investment->slug) }}" class="bttn">ZOBACZ MIESZKANIA</a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <section id="investDesc">
         <div class="container">
             <div class="row">

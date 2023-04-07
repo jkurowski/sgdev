@@ -1,4 +1,4 @@
-<div id="filtr">
+<div id="filtr" class="d-none">
     <div class="container">
         <form method="get" class="row" action="">
             <div class="col-6 col-md-3">

@@ -22,9 +22,9 @@ class InvestmentFloorController extends Controller
         $this->pageId = 2;
     }
 
-    public function index(Floor $floor, Request $request)
+    public function index($slug, Floor $floor, Request $request)
     {
-        $investment = Investment::find(1);
+        $investment = Investment::where('slug', '=', $slug)->firstOrFail();
 
         $investment_room = $investment->load(array(
             'floorRooms' => function ($query) use ($floor, $request) {

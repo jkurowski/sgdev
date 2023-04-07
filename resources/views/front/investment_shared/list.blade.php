@@ -7,7 +7,7 @@
                         <span class="ribbon1"><span>Oferta specjalna</span></span>
                     @endif
                     <div class="col col-top">
-                        <a href="{{route('front.investment.property.index', ['floor' => $room->floor_id, 'property' => $room->id])}}">
+                        <a href="{{route('front.investment.property.index', ['slug' => $investment->slug, 'floor' => $room->floor_id, 'property' => $room->id])}}">
                             <h2>{{$room->name_list}}<br><span>{{$room->number}}</span></h2>
                         </a>
                     </div>
@@ -33,7 +33,7 @@
                         <span class="badge room-list-status-{{ $room->status }}">{{ roomStatus($room->status) }}</span>
                     </div>
                     <div class="col justify-content-end col-list-btn">
-                        <a href="{{route('front.investment.property.index', ['floor' => $room->floor_id, 'property' => $room->id])}}" class="bttn">ZOBACZ</a>
+                        <a href="{{route('front.investment.property.index', ['slug' => $investment->slug, 'floor' => $room->floor_id, 'property' => $room->id])}}" class="bttn">ZOBACZ</a>
                     </div>
                 </div>
             @endforeach
