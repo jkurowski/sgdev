@@ -2052,19 +2052,14 @@ html.swipebox-html.swipebox-touch {
 .closemenu {
   width: 40px;
   height: 40px;
-  background: #b79a5e;
+  background: var(--main-color-blue);
   position: absolute;
   top: 10px;
   right: 15px;
   border-radius: 50%;
   display: none;
   z-index: 999;
-}
-.closemenu:before {
-  content: "\f00d";
-  font-family: "FontAwesome";
-  color: white;
-  font-size: 20px;
+  color: var(--main-color-orange);
 }
 #triggermenu {
   display: none;
@@ -2080,25 +2075,14 @@ html.swipebox-html.swipebox-touch {
   cursor: pointer;
 }
 #triggermenu:hover {
-  background: #b79a5e;
-  color: white;
+  background: var(--main-color-blue);
+  color: var(--main-color-orange);
 }
 .openmenu #triggermenu {
-  color: #b79a5e;
+  color: #fff;
 }
 .openmenu #triggermenu:hover {
   color: white;
-}
-#triggermenu:before {
-  font-family: 'FontAwesome';
-  content: "\f0c9";
-  margin-right: 10px;
-  font-weight: normal;
-  width: 14px;
-  display: inline-block;
-}
-.openmenu #triggermenu:before {
-  content: "\f00d";
 }
 @media (max-width: 1669.98px) {
   header .h-100 {
@@ -2128,6 +2112,18 @@ html.swipebox-html.swipebox-touch {
   #investDesc .position-sticky {
     top: 120px;
   }
+  #mainInvest .main-invest-desc li {
+    font-size: 16px;
+  }
+  #mainInvest .icon-box h3 {
+    font-size: 22px;
+  }
+  .header-holder {
+    height: 74px;
+  }
+  header nav ul li {
+    margin-left: 24px;
+  }
 }
 @media (max-width: 1399.98px) {
   footer p {
@@ -2147,6 +2143,25 @@ html.swipebox-html.swipebox-touch {
   .gradient-border .box p {
     font-size: 13px;
     line-height: 14px;
+  }
+  #mainInvest .main-invest-desc li {
+    font-size: 14px;
+  }
+  #mainInvest .icon-box-text p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  #slider .slider-apla {
+    bottom: 20px;
+    left: 20px;
+    padding: 20px;
+  }
+  #slider .slider-apla p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .header-holder {
+    height: 67px;
   }
 }
 @media (max-width: 1199.98px) {
@@ -2173,6 +2188,62 @@ html.swipebox-html.swipebox-touch {
   #page-header {
     padding: 40px 0;
   }
+  #mainInvest .icon-box {
+    margin-top: 60px;
+  }
+  #mainInvest .icon-box h3 {
+    font-size: 19px;
+  }
+  #mainInvest .icon-box-text p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  #mainInvest .main-invest-desc {
+    padding: 10px 15px;
+  }
+  #mainInvest .main-invest-desc li {
+    font-size: 12px;
+  }
+  #mainInvest .main-invest-desc li:first-child {
+    padding-bottom: 5px;
+    margin-bottom: 0;
+  }
+  .main-invest-map img {
+    width: 230px;
+  }
+  #mainNews p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  #mainNews .news-entry h2 {
+    font-size: 20px;
+  }
+  #slider .slider-apla {
+    bottom: 20px;
+    left: 20px;
+    width: 380px;
+    padding: 20px;
+  }
+  #slider .slider-apla p {
+    display: none;
+  }
+  #slider h2 {
+    margin-bottom: 0;
+    font-size: 27px;
+  }
+  #slider .bttn {
+    font-size: 15px;
+    padding: 9px 25px;
+  }
+  .header-holder {
+    height: 60px;
+  }
+  header nav ul li {
+    margin-left: 25px;
+  }
+  header nav ul li a {
+    font-size: 14px;
+  }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
@@ -2181,6 +2252,78 @@ html.swipebox-html.swipebox-touch {
   }
   section {
     padding: 50px 0;
+  }
+  #mainInvest .icon-box {
+    margin-top: 40px;
+  }
+  #mainInvest .top-section {
+    padding: 50px 0 310px;
+  }
+  #mainInvest .bottom-section {
+    margin-top: -211px;
+    padding-bottom: 50px;
+  }
+  #cta {
+    margin-bottom: 50px;
+  }
+  #slider .slider-apla {
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+  #mainFeatures .icon-box {
+    margin-top: 30px;
+  }
+  header {
+    padding: 10px 0;
+  }
+  header nav {
+    display: none;
+  }
+  header #logo {
+    width: 170px;
+  }
+  .header-holder {
+    height: 58px;
+  }
+  .openmenu header nav {
+    position: fixed;
+    top: 58px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--main-color-blue);
+    display: block;
+    z-index: 999;
+    padding-top: 20px;
+  }
+  .openmenu header nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+  }
+  .openmenu header nav ul li {
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    display: block;
+  }
+  .openmenu header nav ul.submenu {
+    position: static;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #e77427;
+    visibility: visible;
+    opacity: 1;
+    z-index: 30;
+    margin-top: 30px;
+  }
+  .openmenu header nav ul.submenu:after {
+    display: none;
   }
 }
 /* end of 991.98 */
@@ -2198,9 +2341,24 @@ html.swipebox-html.swipebox-touch {
     flex: 0 0 auto;
     width: 33.3333%;
   }
+  .main-invest {
+    background: var(--main-color-blue);
+  }
+  #mainInvest .top-section {
+    padding: 30px 0 250px;
+  }
 }
 /* end of 767.98 */
 @media (max-width: 575.98px) {
+  #mainInvest .top-section,
+  #mainInvest .bottom-section,
+  .rwd-sm {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #mainInvest .bottom-section {
+    padding-bottom: 30px;
+  }
   #page {
     padding: 30px 15px;
   }
@@ -2252,6 +2410,67 @@ html.swipebox-html.swipebox-touch {
   #investGallery .col-6 {
     width: 50%;
   }
+  .section-title h2 {
+    padding-bottom: 20px;
+    font-size: 23px;
+  }
+  h2 {
+    font-size: 23px;
+  }
+  #cta {
+    margin-bottom: 30px;
+  }
+  #slider .slider-apla {
+    bottom: 10px;
+    width: 220px;
+    padding: 15px;
+  }
+  #slider h2 {
+    font-size: 18px;
+  }
+  #slider .bttn {
+    font-size: 12px;
+    padding: 7px 17px;
+    margin-top: 13px !important;
+  }
+  #slider .rslides_nav {
+    width: 30px;
+    height: 30px;
+  }
+  #slider .rslides_nav.prev {
+    left: 0;
+  }
+  #slider .rslides_nav.next {
+    right: 0;
+  }
+  #slider .rslides_nav i {
+    font-size: 22px;
+  }
+  #slider h2 {
+    font-size: 14px;
+  }
+  #slider .bttn {
+    font-size: 10px;
+    padding: 7px 17px;
+  }
+  #slider .slider-apla {
+    bottom: 0;
+    width: 170px;
+    padding: 10px;
+  }
+  #mainInvest .icon-box {
+    margin-top: 20px;
+  }
+  #mainFeatures .icon-box,
+  #mainFeatures .icon-box-text,
+  #mainFeatures .icon-box-img {
+    display: block !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  #mainFeatures .icon-box-img img {
+    margin: 0 auto;
+  }
 }
 /* end of 575.98 */
 @media (max-width: 480px) {
@@ -2267,6 +2486,15 @@ html.swipebox-html.swipebox-touch {
     width: 100%;
     padding: 0 !important;
     display: block !important;
+  }
+  .openmenu header nav ul li {
+    padding: 11px 0;
+  }
+  .openmenu header nav ul.submenu li {
+    padding: 0;
+  }
+  .openmenu header nav ul.submenu li a {
+    padding: 15px 30px;
   }
 }
 /* end of 359.98 */

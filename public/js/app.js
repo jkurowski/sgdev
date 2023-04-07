@@ -63,6 +63,18 @@ $(document).ready(function () {
 
 // Youtube
     $('iframe[src*="youtube"]').wrap("<div class='video-container'></div>");
+
+
+    $("#triggermenu, .closemenu").click(function(b){
+        b.preventDefault();
+        $('body').toggleClass('openmenu');
+    });
+    $("#megamenu-opacity").click(function (event) {
+        if ($('body').hasClass("openmenu")) {
+            $('body').removeClass("openmenu");
+        }
+        event.preventDefault();
+    });
 });
 document.addEventListener("DOMContentLoaded", function() {
     const header = $('#header');

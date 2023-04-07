@@ -61,67 +61,67 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-ms-6 col-lg-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
                             <img src="{{ asset('/uploads/icons/przyjazne-otoczenie.png') }}" width="75" height="75" alt="Przyjazne otoczenie">
                         </div>
-                        <div class="icon-box-text ps-4 pe-5">
+                        <div class="icon-box-text ps-4 pe-0 pe-xl-5">
                             <h3>Przyjazne otoczenie</h3>
                             <p>Park i istniejące ścieżki rowerowe i spacerowe</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-ms-6 col-lg-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
                             <img src="{{ asset('/uploads/icons/bliskosc-komunikacji.png') }}" width="75" height="75" alt="Bliskość komunikacji">
                         </div>
-                        <div class="icon-box-text ps-4 pe-5">
+                        <div class="icon-box-text ps-4 pe-0 pe-xl-5">
                             <h3>Bliskość komunikacji</h3>
                             <p>Przystanki autobusowe i tramwajowe</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-ms-6 col-lg-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
                             <img src="{{ asset('/uploads/icons/dostepnosc-infrastruktury.png') }}" width="75" height="75" alt="Dostępność infrastruktury">
                         </div>
-                        <div class="icon-box-text ps-4 pe-5">
+                        <div class="icon-box-text ps-4 pe-0 pe-xl-5">
                             <h3>Dostępność infrastruktury</h3>
                             <p>Sklepy, centra handlowe, obiekty sportowe itd.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-ms-6 col-lg-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
                             <img src="{{ asset('/uploads/icons/dostepnosc-edukacji.png') }}" width="75" height="75" alt="Dostępność edukacji">
                         </div>
-                        <div class="icon-box-text ps-4 pe-5">
+                        <div class="icon-box-text ps-4 pe-0 pe-xl-5">
                             <h3>Dostępność edukacji</h3>
                             <p>Szkoły, żłobki, przedszkolae</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-ms-6 col-lg-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
                             <img src="{{ asset('/uploads/icons/nowoczesna-architektura.png') }}" width="75" height="75" alt="Nowoczesna architektura">
                         </div>
-                        <div class="icon-box-text ps-4 pe-5">
+                        <div class="icon-box-text ps-4 pe-0 pe-xl-5">
                             <h3>Nowoczesna architektura</h3>
                             <p>Dopracowane elementy wykończenia</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-ms-6 col-lg-4">
                     <div class="icon-box icon-box-white d-flex">
                         <div class="icon-box-img">
                             <img src="{{ asset('/uploads/icons/wybor-metrazy.png') }}" width="75" height="75" alt="Wybór metraży">
                         </div>
-                        <div class="icon-box-text ps-4 pe-5">
+                        <div class="icon-box-text ps-4 pe-0 pe-xl-5">
                             <h3>Wybór metraży</h3>
                             <p>Szeroka gama dostępnych powierzchni</p>
                         </div>
@@ -132,8 +132,8 @@
     </div>
     <div class="bottom-section">
         <div class="container">
-            <div class="row">
-                <div class="col-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
                     <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">
                         <div class="main-invest">
                             <div class="main-invest-title">
@@ -164,7 +164,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-4">
+                <div class="mt-5 mt-md-0 col-12 col-md-6 col-lg-4">
                     <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">
                         <div class="main-invest">
                             <div class="main-invest-title">
@@ -203,15 +203,15 @@
 <section class="pt-0">
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <div class="p-5">
+            <div class="col-12 col-lg-6">
+                <div class="p-0 p-lg-3 p-xl-5 rwd-sm">
                     <p><strong>Nadrzędnym celem SG Development jest profesjonalna realizacja inwestycji mieszkaniowych, usługowych i handlowych.</strong></p>
                     <p>Wszystkie oferowane przez nas mieszkania i lokale usługowe wykonywane są zgodnie z zasadami najwyższej staranności, fachowości oraz troską o każdy detal.</p>
                     <p>Zależy nam, aby klienci korzystający z naszych usług czuli się komfortowo.</p>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="p-5">
+            <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                <div class="p-0 p-lg-3 p-xl-5 rwd-sm">
                     <p><strong>Gwarantujemy im bezpieczeństwo i spokój poprzez kreowanie wysokiej jakości życia. Zadowolenie naszych klientów i zaufanie, którym nas obdarzyli, są nagrodą za naszą pracę.</strong></p>
                     <p>Dbamy o wysoki poziom architektoniczny budynków, o estetykę wnętrz i stworzenie przyjaznego mieszkańcom otoczenia. Dążymy do utrzymania najwyższych standardów w relacjach z klientem.</p>
                 </div>
@@ -222,10 +222,10 @@
     <div id="cta">
         <div class="container">
             <div class="row">
-                <div class="col-9 d-flex align-items-center">
+                <div class="col-12 col-lg-8 col-xxl-9 d-flex align-items-center text-center text-lg-start">
                     <h4>ZOBACZ NASZE DOTYCHCZASOWE <span>REALIZACJE</span></h4>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-lg-4 col-xxl-3 text-center text-lg-end mt-4 mt-lg-0">
                     <a href="{{ route('completed') }}" class="bttn">Zrealizowane inwestycje</a>
                 </div>
             </div>
@@ -235,11 +235,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="mb-5">Współpracujemy z:</h2>
+                <h2 class="mb-3 mb-sm-5">Współpracujemy z:</h2>
             </div>
         </div>
-        <div class="row d-flex justify-content-center">
-            <div class="col-8">
+        <div class="row d-flex justify-content-center rwd-sm">
+            <div class="col-12 col-lg-8">
                 <div class="row">
                     <div class="col-4">
                         <div class="border-gradient">
@@ -279,7 +279,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
                         <img src="{{ asset('/uploads/icons/atrakcyjne-lokalizacje.png') }}" width="75" height="75" alt="Atrakcyjne lokalizacje">
@@ -289,7 +289,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
                         <img src="{{ asset('/uploads/icons/szeroki-wybor-mieszkan.png') }}" width="75" height="75" alt="Szeroki wybór mieszkań">
@@ -299,7 +299,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
                         <img src="{{ asset('/uploads/icons/zaufani-partnerzy.png') }}" width="75" height="75" alt="Zaufani partnerzy">
@@ -309,7 +309,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
                         <img src="{{ asset('/uploads/icons/duze-balkony.png') }}" width="75" height="75" alt="Duże balkony">
@@ -319,7 +319,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
                         <img src="{{ asset('/uploads/icons/panoramiczne-okna.png') }}" width="75" height="75" alt="Panoramiczne okna">
@@ -329,7 +329,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="icon-box icon-box-white d-flex">
                     <div class="icon-box-img">
                         <img src="{{ asset('/uploads/icons/dbalosc-o-ergonomie.png') }}" width="75" height="75" alt="Dbałość o ergonomię">
@@ -343,10 +343,10 @@
     </div>
 </section>
 
-<section id="mainNews" class="p">
+<section id="mainNews" class="rwd-sm">
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <article>
                     <div class="news-entry d-flex">
                         <div class="news-thumb">
@@ -362,7 +362,7 @@
                     </div>
                 </article>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                 <article>
                     <div class="news-entry d-flex">
                         <div class="news-thumb">
@@ -393,7 +393,7 @@
             </div>
         </div>
         <div class="row row-apla">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <div class="contact-text">
                     <img src="/images/logo-sg.png" alt="">
                     <p>&nbsp;</p>
@@ -407,11 +407,11 @@
                     <p>tel. <a href="tel: +48 607 823 400">+48 607 823 400</a></p>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6 mt-5 mt-md-0">
                 <form method="post" id="homepage-form" action="{{ route('contact.index') }}" class="validateForm">
                     {{ csrf_field() }}
                     <div class="row">
-                        <div class="col-12 col-sm-6 form-input">
+                        <div class="col-12 col-sm-6 col-xl-4 form-input">
                             <label for="form_name">Imię <span class="text-danger">*</span></label>
                             <input name="form_name" id="form_name" class="validate[required] form-control @error('form_name') is-invalid @enderror" type="text" value="{{ old('form_name') }}">
 
@@ -419,11 +419,11 @@
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
-                        <div class="col-12 col-sm-6 form-input col-input-important">
+                        <div class="col-12 col-sm-6 col-xl-4 form-input col-input-important">
                             <label for="form_surname">Nazwisko <span class="text-danger">*</span></label>
                             <input name="form_surname" id="form_surname" class="form-control" type="text" value="{{ old('form_surname') }}">
                         </div>
-                        <div class="col-12 col-sm-6 form-input">
+                        <div class="col-12 col-sm-6 col-xl-4 form-input">
                             <label for="form_email">E-mail <span class="text-danger">*</span></label>
                             <input name="form_email" id="form_email" class="validate[required] form-control @error('form_email') is-invalid @enderror" type="text" value="{{ old('form_email') }}">
 
@@ -431,7 +431,7 @@
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
-                        <div class="col-12 col-sm-6 form-input">
+                        <div class="col-12 col-xl-4 form-input">
                             <label for="form_phone">Telefon <span class="text-danger">*</span></label>
                             <input name="form_phone" id="form_phone" class="validate[required] form-control @error('form_phone') is-invalid @enderror" type="text" value="{{ old('form_phone') }}">
 
