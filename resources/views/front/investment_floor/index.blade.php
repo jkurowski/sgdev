@@ -19,7 +19,7 @@
         <div id="planNav" class="row">
             <div class="col-12 col-sm-4 d-flex justify-content-start">@if($prev_floor) <a href="{{route('front.investment.floor.index', [$investment->slug, $prev_floor->id])}}" class="bttn">{{$prev_floor->name}}</a> @endif</div>
             <div class="col-12 col-sm-4 d-flex justify-content-center">
-                <a href="{{route('front.investment.show', $investment->id)}}" class="bttn">Plan budunku</a>
+                <a href="{{route('front.investment.plan', $investment->slug)}}" class="bttn">Plan budunku</a>
             </div>
             <div class="col-12 col-sm-4 d-flex justify-content-end">@if($next_floor) <a href="{{route('front.investment.floor.index', [$investment->slug, $next_floor->id])}}" class="bttn">{{$next_floor->name}}</a> @endif</div>
         </div>
