@@ -8,7 +8,7 @@
                     @endif
                     <div class="col col-top">
                         <a href="{{route('front.investment.property.index', ['slug' => $investment->slug, 'floor' => $room->floor_id, 'property' => $room->id])}}">
-                            <h2>{{$room->name_list}}<br><span>{{$room->number}}</span></h2>
+                            <h2>{{$room->name_list}}</h2>
                         </a>
                     </div>
                     <div class="col">

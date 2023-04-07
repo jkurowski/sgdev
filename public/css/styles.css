@@ -770,13 +770,14 @@ div[class*='col-'].slick-slide {
   padding: 14px 60px;
 }
 #roomsList h2 {
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
   line-height: normal;
   font-weight: 600;
+  color: #03025f;
 }
 #roomsList h2 a {
-  color: #183245;
+  color: #03025f;
 }
 #roomsList h2 span {
   font-size: 42px;
@@ -1030,10 +1031,13 @@ div[class*='col-'].slick-slide {
     padding: 11px 0;
     width: 100%;
   }
+  #roomsList h2 {
+    font-size: 25px;
+  }
 }
 @media (max-width: 1199.98px) {
   #roomsList h2 {
-    font-size: 29px;
+    font-size: 21px;
   }
   #roomsList .col img {
     width: 86px;
@@ -1063,7 +1067,7 @@ div[class*='col-'].slick-slide {
     padding: 5px 15px;
   }
   #roomsList h2 {
-    font-size: 24px;
+    font-size: 16px;
   }
   #roomsList .col img {
     width: 80px;
@@ -1090,7 +1094,7 @@ div[class*='col-'].slick-slide {
 }
 @media (max-width: 767.98px) {
   #roomsList h2 {
-    font-size: 28px;
+    font-size: 10px;
     text-align: center;
     margin-bottom: 10px;
   }
