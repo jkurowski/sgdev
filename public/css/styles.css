@@ -1099,7 +1099,7 @@ div[class*='col-'].slick-slide {
 /* end of 767.98 */
 @media (max-width: 575.98px) {
   #property {
-    padding: 0 15px;
+    padding: 0;
   }
   .plan-info {
     font-size: 16px;
@@ -1118,6 +1118,9 @@ div[class*='col-'].slick-slide {
   }
   .property #contact .form-container {
     padding: 25px;
+  }
+  #property-form .container {
+    padding: 0 !important;
   }
 }
 /* Homepage
