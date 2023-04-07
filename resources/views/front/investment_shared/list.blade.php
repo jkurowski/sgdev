@@ -13,14 +13,16 @@
                     </div>
                     <div class="col-6 col-md justify-content-center">
                         @if($room->file)
-                            <picture>
-                                <source type="image/webp" srcset="/investment/property/list/webp/{{$room->file_webp}}">
-                                <source type="image/jpeg" srcset="/investment/property/list/{{$room->file}}">
-                                <img src="/investment/property/list/{{$room->file}}" alt="{{$room->name}}">
-                            </picture>
+                            <a href="{{route('front.investment.property.index', ['slug' => $investment->slug, 'floor' => $room->floor_id, 'property' => $room->id])}}">
+                                <picture>
+                                    <source type="image/webp" srcset="/investment/property/list/webp/{{$room->file_webp}}">
+                                    <source type="image/jpeg" srcset="/investment/property/list/{{$room->file}}">
+                                    <img src="/investment/property/list/{{$room->file}}" alt="{{$room->name}}">
+                                </picture>
+                            </a>
                         @endif
                     </div>
-                    <div class="col-6 col-md pe-3 pe-lg-5">
+                    <div class="col-6 col-md pe-3 pe-lg-5 d-flex align-items-center">
                         <ul class="mb-0 list-unstyled">
                             @if($room->price)
                                 <li>cena: <b>@money($room->price)</b></li>

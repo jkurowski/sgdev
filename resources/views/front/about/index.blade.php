@@ -11,7 +11,7 @@
 @section('content')
     <div class="container-fluid p-0">
         <div class="row no-gutters">
-            <div class="col-6 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-xl-6 d-flex align-items-center justify-content-center">
                 <div class="block-text">
                     <p><strong>Nadrzędnym celem SG Development jest profesjonalna realizacja inwestycji mieszkaniowych, usługowych i handlowych.</strong></p>
                     <p>&nbsp;</p>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <div class="block-img">
                     <picture>
                         <source type="image/webp" srcset="{{ asset('/uploads/o-nas.webp') }}">
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="row flex-row-reverse no-gutters">
-            <div class="col-6 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-xl-6 d-flex align-items-center justify-content-center">
                 <div class="block-text">
 
                     <p><strong>Gwarantujemy im bezpieczeństwo i spokój poprzez kreowanie wysokiej jakości życia. Zadowolenie naszych klientów i zaufanie, którym nas obdarzyli, są nagrodą za naszą pracę.</strong></p>
@@ -63,7 +63,7 @@
                     <p>Dbamy o wysoki poziom architektoniczny budynków, o estetykę wnętrz i stworzenie przyjaznego mieszkańcom otoczenia. Dążymy do utrzymania najwyższych standardów w relacjach z klientem.</p>
 
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
                                     <img src="/uploads/about/1.png" alt="2 atrakcyjne lokalizacje do wyboru">
@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
                                     <img src="/uploads/about/2.png" alt="Szeroki wybór mieszkań">
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
                                     <img src="/uploads/about/3.png" alt="Zaufani partnerzy">
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
                                     <img src="/uploads/about/4.png" alt="Duże balkony">
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
                                     <img src="/uploads/about/5.png" alt="Panoramiczne okna">
@@ -113,7 +113,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="icon-box icon-box-white d-flex">
                                 <div class="icon-box-img">
                                     <img src="/uploads/about/6.png" alt="Dbałość o ergonomię">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <div class="block-img">
                     <picture>
                         <source type="image/webp" srcset="{{ asset('/uploads/o-nas-2.webp') }}">
