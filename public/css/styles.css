@@ -2083,7 +2083,7 @@ html.swipebox-html.swipebox-touch {
     padding-top: 20px;
   }
   .openmenu header nav ul li a {
-    color: #fff;
+    color: #fff !important;
     font-weight: 500;
     font-size: 18px;
     display: block;
