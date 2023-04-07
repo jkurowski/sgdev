@@ -423,6 +423,7 @@ header nav ul.submenu {
   transition: all 100ms linear;
   visibility: hidden;
   opacity: 0;
+  z-index: 30;
 }
 header nav ul.submenu:after {
   bottom: 100%;
@@ -1610,6 +1611,7 @@ section {
   text-align: center;
   color: white;
   margin: 0;
+  line-height: 17px;
 }
 #investGallery .col-6 {
   flex: 0 0 auto;
@@ -2113,8 +2115,21 @@ html.swipebox-html.swipebox-touch {
   #investCTA .bttn {
     margin-top: 10px !important;
   }
+  .gradient-border .box h4 {
+    font-size: 26px;
+  }
+  #investFeatures p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .icon-box h3 {
+    font-size: 16px;
+  }
+  #investDesc .position-sticky {
+    top: 120px;
+  }
 }
-@media (max-width: 1389.98px) {
+@media (max-width: 1399.98px) {
   footer p {
     line-height: 22px;
   }
@@ -2125,6 +2140,13 @@ html.swipebox-html.swipebox-touch {
   .block-text li {
     font-size: 16px;
     line-height: 25px;
+  }
+  .gradient-border .box h4 {
+    font-size: 20px;
+  }
+  .gradient-border .box p {
+    font-size: 13px;
+    line-height: 14px;
   }
 }
 @media (max-width: 1199.98px) {
@@ -2172,6 +2194,10 @@ html.swipebox-html.swipebox-touch {
   .invest-cta-text {
     padding: 30px 0 !important;
   }
+  #investGallery .col-6 {
+    flex: 0 0 auto;
+    width: 33.3333%;
+  }
 }
 /* end of 767.98 */
 @media (max-width: 575.98px) {
@@ -2215,6 +2241,16 @@ html.swipebox-html.swipebox-touch {
   }
   #cta h4 {
     font-size: 25px;
+  }
+  #investMapLegend img {
+    max-width: 29px;
+  }
+  #investMapLegend p {
+    font-size: 11px;
+    line-height: 14px;
+  }
+  #investGallery .col-6 {
+    width: 50%;
   }
 }
 /* end of 575.98 */
