@@ -725,6 +725,9 @@ div[class*='col-'].slick-slide {
 #plan {
   padding: 40px;
 }
+#plan-holder {
+  padding: 15px;
+}
 .floor-nav {
   position: sticky;
   top: 110px;
