@@ -17,7 +17,7 @@
                 @if($floor->html)
                     <area
                         shape="poly"
-                        href="{{route('front.investment.floor.index', $floor)}}"
+                        href="{{route('front.investment.floor.index', [$investment->slug, $floor])}}"
                         title="{{$floor->name}}"
                         alt="floor-{{$floor->id}}"
                         data-item="{{$floor->id}}"
