@@ -1045,6 +1045,10 @@ div[class*='col-'].slick-slide {
   }
   .property-img img {
     width: 300px;
+    margin: 0 auto;
+  }
+  .property .property-desc .bttn {
+    margin-top: 0;
   }
 }
 @media (max-width: 991.98px) {
