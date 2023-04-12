@@ -596,7 +596,7 @@ footer #logo {
   display: flex;
 }
 #slider .rslides_tabs a {
-  text-indent: 999px;
+  text-indent: -99999px;
   width: 12px;
   height: 12px;
   display: block;
