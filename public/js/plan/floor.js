@@ -10,20 +10,31 @@ function onWindowResize() {
 $(document).ready(function() {
 
 // Tooltip
-    $('area[title]').each(function () {
-        const elem = $(this), clas = $(this).attr('class');
-        elem.qtip({
-            content: $(this).attr('title'),
+    $('img[usemap] area[title]').each(function () {
+        const $this = $(this);
+        const clas = $this.attr('class');
+        $this.qtip({
+            content: $this.attr('title'),
             position: {
                 my: 'bottom center',
                 at: 'bottom center',
                 target: 'mouse',
                 adjust: {x:0, y: -10} ,
             },
-            style: {classes: clas,tip: {corner: true,mimic: false,width: 12, height: 8,border: true,offset: 0}},
-            hide: {fixed: false, effect: false, show: false},
+            style: {
+                classes: clas,
+                tip: {
+                    corner: true,
+                    mimic: false,
+                    width: 12,
+                    height: 8,
+                    border: true,
+                    offset: 0
+                }
+            },
         });
     });
+
 
     const sold = 'ec2327'; // mieszkanie sprzedane
     const reservation = '1788c9'; // mieszkanie zarezerwowane

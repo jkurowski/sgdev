@@ -381,6 +381,7 @@ aside {
   position: fixed;
   right: 0;
   top: 200px;
+  z-index: 90;
 }
 aside li {
   margin-top: 2px;
@@ -2256,6 +2257,9 @@ html.swipebox-html.swipebox-touch {
   }
   .about-page .icon-box-img img {
     margin: 0 auto;
+  }
+  .qtip {
+    display: none !important;
   }
 }
 /* end of 767.98 */
