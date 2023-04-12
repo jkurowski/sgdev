@@ -956,6 +956,9 @@ div[class*='col-'].slick-slide {
   font-size: 17px;
   text-transform: uppercase;
 }
+#sortList select {
+  width: 230px;
+}
 /* qTip
 ================================================== */
 .qtip {
@@ -1158,6 +1161,22 @@ div[class*='col-'].slick-slide {
   #plan {
     padding: 20px;
   }
+  #filtr {
+    padding: 15px 0 20px;
+  }
+  #filtr label {
+    font-size: 14px;
+  }
+  #filtr select {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  #filtr .bttn {
+    font-size: 13px;
+  }
+  #filtr .bttn.bttn-sm {
+    padding: 4px 17px;
+  }
 }
 /* end of 767.98 */
 @media (max-width: 575.98px) {
@@ -1190,6 +1209,11 @@ div[class*='col-'].slick-slide {
     padding: 8px 0;
     width: 100%;
     font-size: 13px;
+  }
+  #filtr label {
+    margin-bottom: 5px;
+    margin-top: 7px;
+    font-size: 12px;
   }
 }
 /* Homepage

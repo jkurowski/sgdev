@@ -12,7 +12,7 @@
     @if($investment->plan)
     <div id="plan-holder">
         <div class="plan-info">Z planu budynku wybierz piętro. Z <a href="#roomsList" class="scroll-to" data-offset="80">listy poniżej</a> wybierz mieszkanie.</div>
-        <img src="{{ asset('/investment/plan/'.$investment->plan->file.'') }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan">
+        <img src="{{ asset('/investment/plan/'.$investment->plan->file.'') }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan" class="w-100">
         <map name="invesmentplan">
             @foreach($investment->floors as $floor)
                 @if($floor->html)
