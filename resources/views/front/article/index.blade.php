@@ -98,10 +98,10 @@
                                     <h2><a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">Abrahama</a></h2>
                                     <ul class="mb-0 list-unstyled mt-4">
                                         <li>
-                                            Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
+                                            Oddanie inwestycji: <span class="float-end">Q4 2024</span>
                                         </li>
                                         <li>
-                                            DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
+                                            DOSTĘPNYCH MIESZKAŃ: <span class="float-end">67</span>
                                         </li>
                                     </ul>
                                     <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>

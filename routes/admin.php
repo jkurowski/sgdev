@@ -66,20 +66,6 @@ Route::group([
             ]);
         });
 
-    // Tracker
-        Route::group(['prefix'=>'/tracker', 'as' => 'tracker.'], function () {
-
-            Route::get('/', 'Tracker\IndexController@index')->name('index');
-            Route::get('errors', 'Tracker\IndexController@errors')->name('errors');
-            Route::get('apiErrors', 'Tracker\IndexController@apiErrors')->name('apiErrors');
-            Route::get('events', 'Tracker\IndexController@events')->name('events');
-            Route::get('apiEvents', 'Tracker\IndexController@apiEvents')->name('apiEvents');
-            Route::get('event/{id}', 'Tracker\IndexController@event')->name('event');
-            Route::get('apiVisits', 'Tracker\IndexController@apiVisits')->name('apiVisits');
-            Route::get('log/{uuid}', 'Tracker\IndexController@log')->name('log');
-            Route::get('apiLog/{uuid}', 'Tracker\IndexController@apiLog')->name('apiLog');
-        });
-
     // Dashboard
         Route::group(['prefix'=>'/dashboard', 'as' => 'dashboard.'], function () {
 

@@ -182,10 +182,10 @@
                             <div class="main-invest-desc">
                                 <ul class="mb-0 list-unstyled">
                                     <li>
-                                        Oddanie inwestycji: <span class="float-end">IV kwartał 2024</span>
+                                        Oddanie inwestycji: <span class="float-end">Q4 2024</span>
                                     </li>
                                     <li>
-                                        DOSTĘPNYCH MIESZKAŃ: <span class="float-end">68</span>
+                                        DOSTĘPNYCH MIESZKAŃ: <span class="float-end">67</span>
                                     </li>
                                 </ul>
                             </div>
