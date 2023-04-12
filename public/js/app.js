@@ -67,6 +67,18 @@ $(document).ready(function () {
 // Youtube
     $('iframe[src*="youtube"]').wrap("<div class='video-container'></div>");
 
+    let elmSelect = document.getElementById('filtr-sort');
+
+    if (!!elmSelect) {
+        elmSelect.addEventListener('change', e => {
+            let choice = e.target.value;
+            if (!choice) return;
+
+            let url = new URL(window.location.href);
+            url.searchParams.set('sort', choice);
+            window.location.href = url;
+        });
+    }
 
     $("#triggermenu, .closemenu").click(function(b){
         b.preventDefault();

@@ -764,8 +764,11 @@ div[class*='col-'].slick-slide {
   position: sticky;
   top: 110px;
 }
-#roomsList {
-  margin-top: 40px;
+#sortList select {
+  background: #e77427;
+  color: white;
+  padding: 8px 15px;
+  font-size: 13px;
 }
 #roomsList .container {
   border-top: 1px solid #e5e5e5;
@@ -790,13 +793,13 @@ div[class*='col-'].slick-slide {
   -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.38);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.38);
 }
-#roomsList .col {
+#roomsList .row div {
   padding: 10px;
   display: flex;
   align-items: center;
 }
-#roomsList .col img {
-  width: 200px;
+#roomsList .row div img {
+  width: 150px;
 }
 #roomsList .bttn {
   padding: 14px 60px;
@@ -934,11 +937,24 @@ div[class*='col-'].slick-slide {
   background: #de8300;
 }
 #filtr {
-  border-top: 4px solid var(--main-color-gold);
+  background: var(--main-color-blue);
+  padding: 20px 0 30px;
+}
+#filtr label {
+  color: white;
+  display: block;
+  margin-bottom: 11px;
 }
 #filtr select {
-  border: 1px solid #ececec;
-  padding: 11px;
+  border: 0;
+  background: white;
+  padding: 13px;
+  color: var(--main-color-blue);
+  font-size: 17px;
+}
+#filtr .bttn {
+  font-size: 17px;
+  text-transform: uppercase;
 }
 /* qTip
 ================================================== */
