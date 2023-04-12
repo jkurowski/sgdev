@@ -1,4 +1,4 @@
-<div id="page-header" style="background:#0c0940 url('https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/blue-bg-2.jpg') no-repeat top center">
+<div id="page-header" style="background:#08074f url('https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/blue-bg-2.jpg') no-repeat top center">
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex align-items-end justify-content-center">

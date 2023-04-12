@@ -240,12 +240,12 @@
                             <p>&nbsp;</p>
                             <p>&nbsp;</p>
                             <h2>Siedziba firmy</h2>
-                            <p>tel. <a href="tel: +48 605 433 401">+48 605 433 401</a></p>
+                            <p>tel. <a href="tel:+48605433401">+48 605 433 401</a></p>
                             <p>ul. Śliska 3 lok. 1B</p>
                             <p>00-127 Warszawa</p>
                             <p>&nbsp;</p>
                             <h2>Kontakt do Biura Sprzedaży</h2>
-                            <p>tel. <a href="tel: +48 607 823 400">+48 607 823 400</a></p>
+                            <p>tel. <a href="tel:+48607823400">+48 607 823 400</a></p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 mt-5 mt-md-0">
