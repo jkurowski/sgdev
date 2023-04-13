@@ -15,8 +15,8 @@
                             <li>
                                 <a href="#">Inwestycje w sprzedaży</a>
                                 <ul class="submenu mb-0 list-unstyled">
-                                    <li><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Radarowa</a></li>
                                     <li><a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">Abrahama 14</a></li>
+                                    <li><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Radarowa</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{ route('about') }}">O nas</a></li>
