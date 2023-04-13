@@ -10,8 +10,76 @@
 
 @section('content')
     @if($investment->file_header)
-        <div id="investHeader">
-            <img src="{{ asset('/investment/header/'.$investment->file_header) }}" alt="{{ $investment->name }}" class="w-100">
+        @if($investment->status == 3)
+            <div id="investHeader" class="pe-3 ps-3 pt-5 pb-5 p-md-5" style="min-height:70vh;background-size: cover;background-position: center;background-image: url('{{ asset('/investment/header/'.$investment->file_header) }}')">
+        @else
+            <div id="investHeader">
+                <img src="{{ asset('/investment/header/'.$investment->file_header) }}" alt="{{ $investment->name }}" class="w-100">
+        @endif
+            @if($investment->contact_form && $investment->status == 3)
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-12 col-lg-7 d-flex justify-content-center">
+                            <div class="investHeader-apla">
+                                <div class="contact-text text-center">
+                                    {!! $investment->contact_form_text !!}
+                                </div>
+                                <form method="post" id="homepage-form" action="{{ route('contact.index') }}" class="validateForm">
+                                    {{ csrf_field() }}
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-xl-4 form-input">
+                                            <label for="form_name">Imię <span class="text-danger">*</span></label>
+                                            <input name="form_name" id="form_name" class="validate[required] form-control @error('form_name') is-invalid @enderror" type="text" value="{{ old('form_name') }}">
+
+                                            @error('name')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-xl-4 form-input col-input-important">
+                                            <label for="form_surname">Nazwisko <span class="text-danger">*</span></label>
+                                            <input name="form_surname" id="form_surname" class="form-control" type="text" value="{{ old('form_surname') }}">
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-xl-4 form-input">
+                                            <label for="form_email">E-mail <span class="text-danger">*</span></label>
+                                            <input name="form_email" id="form_email" class="validate[required] form-control @error('form_email') is-invalid @enderror" type="text" value="{{ old('form_email') }}">
+
+                                            @error('email')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                        </div>
+                                        <div class="col-12 col-xl-4 form-input">
+                                            <label for="form_phone">Telefon <span class="text-danger">*</span></label>
+                                            <input name="form_phone" id="form_phone" class="validate[required] form-control @error('form_phone') is-invalid @enderror" type="text" value="{{ old('form_phone') }}">
+
+                                            @error('phone')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                        </div>
+                                        <div class="rodo-rules">
+                                            @foreach ($rules as $r)
+                                                <div class="col-12">
+                                                    <div class="rodo-rule clearfix">
+                                                        <input name="rule_{{$r->id}}" id="rule_{{$r->id}}" value="1" type="checkbox" @if($r->required === 1) class="validate[required]" @endif data-prompt-position="topLeft:0">
+                                                        <label for="zgoda_{{$r->id}}" class="rules-text">{!! $r->text !!}</label>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="row row-form-submit">
+                                        <div class="col-12 pt-3">
+                                            <div class="input text-center">
+                                                <input name="form_page" type="hidden" value="homepage">
+                                                <button class="bttn" type="submit">WYŚLIJ WIADOMOŚĆ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
     @endif
     @if($investment->id == 1)
@@ -222,7 +290,7 @@
     </section>
     @endif
 
-    @if($investment->contact_form)
+    @if($investment->contact_form && $investment->status != 3)
         <section id="contact">
             <div class="container">
                 <div class="row">

@@ -1454,6 +1454,17 @@ section {
 }
 /* Opis inwestycji
 ================================================== */
+#investHeader {
+  position: relative;
+}
+#investHeader .investHeader-apla {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border: 5px solid white;
+  -webkit-box-shadow: 0 8px 16px 0 #000000;
+  -moz-box-shadow: 0 8px 16px 0 #000000;
+  box-shadow: 0 8px 16px 0 #000000;
+}
 .gradient-border .box h4 {
   font-size: 30px;
   font-weight: 700;
@@ -2375,6 +2386,15 @@ html.swipebox-html.swipebox-touch {
   }
   #mainInvest .icon-box {
     margin-top: 20px;
+  }
+  .land-page #investHeader {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .land-page #investHeader .investHeader-apla {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 2px solid #fff;
   }
   #mainFeatures .icon-box,
   #mainFeatures .icon-box-text,
