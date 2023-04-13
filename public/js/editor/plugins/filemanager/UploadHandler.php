@@ -474,7 +474,7 @@ class UploadHandler
 
     protected function upcount_name_callback($matches) {
         $index = isset($matches[1]) ? ((int)$matches[1]) + 1 : 1;
-        $ext = isset($matches[2]) ? $matches[2] : '';
+        $ext = $matches[2] ?? '';
         return ' ('.$index.')'.$ext;
     }
 
@@ -488,19 +488,22 @@ class UploadHandler
     }
 
     protected function get_unique_filename($file_path, $name, $size, $type, $error,
-            $index, $content_range) {
+                                           $index, $content_range) {
         while(is_dir($this->get_upload_path($name))) {
             $name = $this->upcount_name($name);
         }
         // Keep an existing filename if this is part of a chunked upload:
-        $uploaded_bytes = $this->fix_integer_overflow((int)$content_range[1]);
+        $uploaded_bytes =!empty($content_range[1]) ? $this->fix_integer_overflow((int)$content_range[1]) : 0;
         while (is_file($this->get_upload_path($name))) {
-            if ($uploaded_bytes === $this->get_file_size(
-                    $this->get_upload_path($name))) {
-                break;
+            if(isset($uploaded_bytes)){
+                if ($uploaded_bytes === $this->get_file_size(
+                        $this->get_upload_path($name))) {
+                    break;
+                }
             }
             $name = $this->upcount_name($name);
         }
+
         return $name;
     }
 
@@ -1410,11 +1413,11 @@ class UploadHandler
                 $files[] = $this->handle_file_upload(
                     isset($upload['tmp_name']) ? $upload['tmp_name'] : null,
                     $file_name ? $file_name : (isset($upload['name']) ?
-                            $upload['name'] : null),
+                        $upload['name'] : null),
                     $size ? $size : (isset($upload['size']) ?
-                            $upload['size'] : $this->get_server_var('CONTENT_LENGTH')),
+                        $upload['size'] : $this->get_server_var('CONTENT_LENGTH')),
                     isset($upload['type']) ?
-                            $upload['type'] : $this->get_server_var('CONTENT_TYPE'),
+                        $upload['type'] : $this->get_server_var('CONTENT_TYPE'),
                     isset($upload['error']) ? $upload['error'] : null,
                     null,
                     $content_range
@@ -1425,7 +1428,7 @@ class UploadHandler
         $name = $file_name ? $file_name : $upload['name'][0];
         $res = $this->generate_response($response, $print_response);
         if(is_file($this->get_upload_path($name))){
-            $uploaded_bytes = $this->fix_integer_overflow((int)$content_range[1]);
+            $uploaded_bytes =!empty($content_range[1]) ? $this->fix_integer_overflow((int)$content_range[1]) : 0;
             $totalSize = $this->get_file_size($this->get_upload_path($name));
             if ($totalSize - $uploaded_bytes - $this->options['readfile_chunk_size'] < 0) {
                 $this->onUploadEnd($res);
@@ -1592,8 +1595,8 @@ class UploadHandler
 //        return substr(basename('X'.$splited[count($splited)-1], $suffix), 1);
 //    }
 
-    protected function basename($filepath, $suffix = null) {
-        $splited = preg_split('/\//', rtrim($filepath, '/'));
-        return basename(end($splited), $suffix);
+    protected function basename($filepath, $suffix = '') {
+        $splited = preg_split('/\//', rtrim ($filepath, '/ '));
+        return substr(basename('X'.$splited[count($splited)-1], $suffix), 1);
     }
 }

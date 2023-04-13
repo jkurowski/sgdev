@@ -693,11 +693,13 @@ function filenameSort($x, $y)
     global $descending;
 
     if ($x['is_dir'] !== $y['is_dir']) {
-        return $y['is_dir'];
+        return $y['is_dir'] ? 1 : -1;
     } else {
-        return ($descending)
-            ? $x['file_lcase'] < $y['file_lcase']
-            : $x['file_lcase'] >= $y['file_lcase'];
+        if ($descending) {
+            return strcasecmp($y['file_lcase'], $x['file_lcase']);
+        } else {
+            return strcasecmp($x['file_lcase'], $y['file_lcase']);
+        }
     }
 }
 
