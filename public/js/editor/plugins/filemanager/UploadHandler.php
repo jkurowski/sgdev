@@ -1110,8 +1110,7 @@ class UploadHandler
             }
         }
         if (count($failed_versions)) {
-            $file->error = $this->get_error_message('image_resize')
-                    .' ('.implode($failed_versions, ', ').')';
+            $file->error = $this->get_error_message('image_resize') .' ('.implode(' ', $failed_versions).')';
         }
         // Free memory:
         $this->destroy_image_object($file_path);
@@ -1588,8 +1587,13 @@ class UploadHandler
         return $this->generate_response($response, $print_response);
     }
 
+//    protected function basename($filepath, $suffix = null) {
+//        $splited = preg_split('/\//', rtrim ($filepath, '/ '));
+//        return substr(basename('X'.$splited[count($splited)-1], $suffix), 1);
+//    }
+
     protected function basename($filepath, $suffix = null) {
-        $splited = preg_split('/\//', rtrim ($filepath, '/ '));
-        return substr(basename('X'.$splited[count($splited)-1], $suffix), 1);
+        $splited = preg_split('/\//', rtrim($filepath, '/'));
+        return basename(end($splited), $suffix);
     }
 }

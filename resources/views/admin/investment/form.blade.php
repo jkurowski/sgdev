@@ -64,6 +64,7 @@
                             @include('form-elements.html-input-file', ['label' => 'Obrazek nagłówka', 'sublabel' => '(wymiary: '.config('images.investment.header_width').'px / '.config('images.investment.header_height').'px)', 'name' => 'file_header'])
                             @include('form-elements.textarea-fullwidth', ['label' => 'Opis inwestycji', 'name' => 'content', 'value' => $entry->content, 'rows' => 11, 'class' => 'tinymce', 'required' => 1])
                             @include('form-elements.textarea-fullwidth', ['label' => 'Opis inwestycji po zakończeniu', 'name' => 'end_content', 'value' => $entry->end_content, 'rows' => 11, 'class' => 'tinymce'])
+                            @include('form-elements.textarea-fullwidth', ['label' => 'Dane kontaktowe', 'name' => 'contact_form_text', 'value' => $entry->contact_form_text, 'rows' => 11, 'class' => 'tinymce'])
                         </div>
                     </div>
                 </div>

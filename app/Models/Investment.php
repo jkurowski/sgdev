@@ -29,6 +29,7 @@ class Investment extends Model
         'content',
         'end_content',
         'contact_form',
+        'contact_form_text',
         'file_thumb',
         'file_header'
     ];
