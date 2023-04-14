@@ -1,6 +1,7 @@
 <div class="card-header border-bottom card-nav">
     <nav class="nav">
         <a class="nav-link " href="{{route('admin.developro.edit', $investment->id)}}"><span class="fe-info"></span> {{$investment->name}}</a>
+        <a class="nav-link {{ Request::routeIs('admin.developro.investment.article.*') ? ' active' : '' }}" href="{{route('admin.developro.investment.article.index', $investment->id)}}"><span class="fe-book-open"></span> Dziennik inwestycji</a>
         @if ($investment->type == 1)
             <a class="nav-link {{ Request::routeIs('admin.developro.investment.building.index') ? ' active' : '' }}" href="{{route('admin.developro.investment.building.index', $investment->id)}}"><span class="fe-package"></span> Lista budynków</a>
         @endif

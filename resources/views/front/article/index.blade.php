@@ -9,41 +9,41 @@
 @stop
 
 @section('content')
-    <section id="mainNews">
+    <section id="mainNews" class="rwd-sm">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6">
-                    <article>
-                        <div class="news-entry d-flex">
-                            <div class="news-thumb">
-                                <a href="">
-                                    <img src="{{ asset('/uploads/news-1.jpg') }}" alt="">
-                                </a>
+                @foreach($articles as $key => $article)
+                    <div class="col-12 col-lg-6 @if($key == 1) mt-4 mt-lg-0 @endif @if($key > 1) mt-4 @endif">
+                        <article>
+                            <div class="news-entry d-flex">
+                                <div class="news-thumb">
+                                    @if($article->content)
+                                        <a href="{{route('front.news.show', $article->slug)}}">
+                                            @endif
+                                            <img src="{{ asset('/uploads/articles/thumbs/webp/'.$article->file_webp) }}" alt="{{ $article->file_alt }}">
+                                            @if($article->content)
+                                        </a>
+                                    @endif
+                                </div>
+                                <div class="news-text ps-4">
+                                    <h2>
+                                        @if($article->content)
+                                            <a href="{{route('front.news.show', $article->slug)}}">
+                                                @endif
+                                                {{ $article->title }}
+                                                @if($article->content)
+                                            </a>
+                                        @endif
+                                    </h2>
+                                    <p>{{ $article->content_entry }}</p>
+                                    @if($article->content)
+                                        <a href="{{route('front.news.show', $article->slug)}}" class="bttn bttn-sm mt-4">CZYTAJ WIĘCEJ</a>
+                                    @endif
+                                </div>
                             </div>
-                            <div class="news-text ps-4">
-                                <h2><a href="">Budynek usługowo-biurowy na Mokotowie.</a></h2>
-                                <p>Inwestycja w przygotowaniu.</p>
-                                <a href="" class="bttn bttn-sm mt-4 d-none">CZYTAJ WIĘCEJ</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
-                    <article>
-                        <div class="news-entry d-flex">
-                            <div class="news-thumb">
-                                <a href="">
-                                    <img src="{{ asset('/uploads/news-2.jpg') }}" alt="">
-                                </a>
-                            </div>
-                            <div class="news-text ps-4">
-                                <h2><a href="">Dziennik budowy</a></h2>
-                                <p>Po rozpoczęciu budowy będziemy publikować informację o bieżącym postępie prac.</p>
-                                <a href="" class="bttn bttn-sm mt-4 d-none">CZYTAJ WIĘCEJ</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                        </article>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

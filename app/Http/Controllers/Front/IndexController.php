@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 // CMS
@@ -19,6 +20,8 @@ class IndexController extends Controller
         $rules = RodoRules::orderBy('sort')->whereStatus(1)->get();
         $properties = Property::where('homepage', 1)->get();
         $popup = 0;
+
+        $articles = Article::where('status', 1)->orderBy('id', 'DESC')->limit(2)->get();
 
         if(settings()->get("popup_status") == "1") {
             if(settings()->get("popup_mode") == "1") {
@@ -38,7 +41,8 @@ class IndexController extends Controller
             'rules',
             'sliders',
             'popup',
-            'properties'
+            'properties',
+            'articles'
         ));
     }
 

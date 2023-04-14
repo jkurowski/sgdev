@@ -27,7 +27,7 @@ class ArticleFormRequest extends FormRequest
         return [
             'title' => 'required|string|min:5|max:100|unique:articles,title,'.$this->route()->article,
             'content_entry' => 'required|string|min:5',
-            'content' => 'required|string|min:5',
+            'content' => '',
             'status' => 'boolean',
             'file_alt' => '',
             'meta_title' => '',
@@ -43,8 +43,7 @@ class ArticleFormRequest extends FormRequest
             'title.unique' => 'Taki wpis już istnieje',
             'title.max.string' => 'Maksymalna ilość znaków: 100',
             'title.min.string' => 'Minimalna ilość znaków: 5',
-            'content_entry.required' => 'To pole jest wymagane',
-            'content.required' => 'To pole jest wymagane',
+            'content_entry.required' => 'To pole jest wymagane'
         ];
     }
 }

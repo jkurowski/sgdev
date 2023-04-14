@@ -283,8 +283,23 @@
 
     <section id="investGallery">
         <div class="container">
-            <div class="col-12">
-                {!! parse_text('[galeria=gallery]2[/galeria]') !!}
+            <div class="row">
+                <div class="col-12">
+                    {!! parse_text('[galeria=gallery]2[/galeria]') !!}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="investNews" class="pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <span>{{ $investment->name }}</span>
+                        <h2>DZIENNIK INWESTYCJI</h2>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
