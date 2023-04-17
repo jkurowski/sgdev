@@ -22,12 +22,11 @@
                         <p>&nbsp;</p>
                         <p><b>SPRZEDAŻ MIESZKAŃ ZAKOŃCZONA</b></p>
                     </div>
-                    <p>Inwestycja 1 SIERPNIA została zrealizowana w okresie wrzesień 2019 - marzec 2021r przy ul. 1 Sierpnia 32 w Warszawie we wspólnym przedsięwzięciu SG Development sp. z o.o. dla WSM OCHOTA z Wykonawcą Generalnym UNIBEP S. A.
-                    </p>
+                    <p>Inwestycja 1 SIERPNIA przy ul. 1 Sierpnia 32 w Warszawie została zrealizowana w okresie wrzesień 2019 - marzec 2021 jako wspólne przedsięwzięcie SG Development i WSM OCHOTA z UNIBEP S. A. jako Generalnym Wykonawcą.</p>
                     <p>&nbsp;</p>
                     <p>W 8 kondygnacyjnym budynku wybudowano 80 mieszkań o wysokim standardzie o powierzchniach od 28 do 110 m2 z podziemnym garażem i miejscami postojowymi na terenie inwestycji. Na parterze budynku znajdują się 4 lokale usługowe.</p>
                     <p>&nbsp;</p>
-                    <p> Budynek został zrealizowany z dbałością o każdy szczegół. Eleganckie części wspólne utrzymane w nowoczesnej stylistyce spełniają oczekiwania najbardziej wymagających. Wykorzystane zostały szlachetne materiały najwyższej jakości, w nowoczesnym połączeniu szarości, drewna i zieleni. Inwestycja jest znakomicie zlokalizowana i skomunikowana z każdą dzielnicą Warszawy. W okolicy znajdują się liczne szkoły, przedszkola, sklepy, ośrodki kultury oraz sportu. Otoczenie pełne zieleni i sąsiedztwo kilku parków zachęca do aktywnego trybu życia.</p>
+                    <p>Budynek został zrealizowany z dbałością o każdy szczegół. Eleganckie części wspólne utrzymane w nowoczesnej stylistyce spełniają oczekiwania najbardziej wymagających. Wykorzystane zostały szlachetne materiały najwyższej jakości, w nowoczesnym połączeniu szarości, drewna i zieleni. Inwestycja jest znakomicie zlokalizowana i skomunikowana z każdą dzielnicą Warszawy. W okolicy znajdują się liczne szkoły, przedszkola, sklepy, ośrodki kultury oraz sportu. Otoczenie pełne zieleni i sąsiedztwo kilku parków zachęca do aktywnego trybu życia.</p>
                 </div>
             </div>
             <div class="col-12 col-xl-6">

@@ -69,7 +69,7 @@
                                     <img src="/uploads/about/1.png" alt="2 atrakcyjne lokalizacje do wyboru">
                                 </div>
                                 <div class="icon-box-text ps-4 pe-3 d-flex align-items-center">
-                                    <p>2 atrakcyjne lokalizacje do wyboru</p>
+                                    <p>Atrakcyjne lokalizacje</p>
                                 </div>
                             </div>
                         </div>

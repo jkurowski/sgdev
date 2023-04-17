@@ -26,7 +26,7 @@
                         <i class="las la-envelope-open-text"></i>
                     </div>
                     <h3>Napisz do nas</h3>
-                    <p><a href="mailto:konto@sgdevelopment.pl">konto@sgdevelopment.pl</a></p>
+                    <p><a href="mailto:kontakt@sgdevelopment.pl">kontakt@sgdevelopment.pl</a></p>
                 </div>
             </div>
             <div class="col-12 col-lg-4 mt-4 mt-lg-0">
