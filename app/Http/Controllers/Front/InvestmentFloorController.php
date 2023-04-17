@@ -61,8 +61,8 @@ class InvestmentFloorController extends Controller
             'investment' => $investment_room,
             'properties' => $investment_room->floorRooms,
             'uniqueRooms' => $this->repository->getUniqueRooms($floor->properties()),
-            'next_floor' => $floor->findNext($investment->id, null, $floor->id),
-            'prev_floor' => $floor->findPrev($investment->id, null, $floor->id),
+            'next_floor' => $floor->findNext($investment->id, null, $floor->position),
+            'prev_floor' => $floor->findPrev($investment->id, null, $floor->position),
             'page' => $page
         ]);
     }

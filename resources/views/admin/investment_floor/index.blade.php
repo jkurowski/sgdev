@@ -27,6 +27,10 @@
                         <tr>
                             <th>#</th>
                             <th>Nazwa</th>
+                            <th>Typ</th>
+                            <th class="text-center">Numer</th>
+                            <th class="text-center">Kolejność</th>
+                            <th>Zakres pow.</th>
                             <th class="text-center">Lokale</th>
                             <th>Data modyfikacji</th>
                             <th></th>
@@ -37,6 +41,10 @@
                             <tr id="recordsArray_{{ $p->id }}">
                                 <th class="position" scope="row">{{ $index+1 }}</th>
                                 <td><a href="{{route('admin.developro.investment.floor.property.index', [$investment, $p])}}">{{ $p->name }}</a></td>
+                                <td>{{ floorType($p->type) }}</td>
+                                <td class="text-center">{{ $p->number }}</td>
+                                <td class="text-center">{{ $p->position }}</td>
+                                <td>{{ $p->area_range }}</td>
                                 <td class="text-center">{{ $p->properties->count() }}</td>
                                 <td>{{ $p->updated_at }}</td>
                                 <td class="option-120">

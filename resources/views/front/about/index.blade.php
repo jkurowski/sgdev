@@ -165,13 +165,10 @@
                                     <h2><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Radarowa</a></h2>
                                     <ul class="mb-0 list-unstyled mt-4">
                                         <li>
-                                            Oddanie inwestycji: <span class="float-end">-</span>
-                                        </li>
-                                        <li>
-                                            DOSTĘPNYCH MIESZKAŃ: <span class="float-end">-</span>
+                                            SPRZEDAŻ INWESTYCJI JUŻ WKRÓTCE!
                                         </li>
                                     </ul>
-                                    <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}" class="bttn bttn-sm mt-4">ZOBACZ INWESTYCJE</a>
+                                    <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}" class="bttn bttn-sm mt-4">WIĘCEJ INFORMACJI</a>
                                 </div>
                             </div>
                         </div>
