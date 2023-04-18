@@ -40,6 +40,19 @@
             </div>
         </div>
 
+        <div class="row mt-5 mb-5">
+            <div class="col-12 col-md-6">
+                <div class="contact-box p-3 p-md-4">
+                    <img src="{{ asset('/images/biuro.jpg') }}" width="786" height="545" alt="Zdjecie biura sprzedaży">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="contact-box p-3 p-md-4 h-100 w-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2443.8488972493083!2d21.090783999999996!3d52.22796299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTLCsDEzJzQwLjciTiAyMcKwMDUnMjYuOCJF!5e0!3m2!1spl!2spl!4v1681812920396!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
         <div class="row d-flex justify-content-center pt-4 pt-xl-5 mt-4 mt-xl-5">
             <div class="col-12">
                 <div class="section-title text-center mb-4">

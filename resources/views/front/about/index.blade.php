@@ -158,17 +158,14 @@
                     <div class="invest-cta">
                         <div class="row">
                             <div class="col-12 col-md-5">
-                                <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}"><img src="/uploads/box/project-radarowa.jpg" alt=""></a>
+                                <img src="/uploads/box/project-planowana.jpg" alt="Inwestycja planowana">
                             </div>
                             <div class="col-12 col-md-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
-                                    <h2><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Radarowa</a></h2>
+                                    <h2>Budynek usługowo-biurowy na Mokotowie</h2>
                                     <ul class="mb-0 list-unstyled mt-4">
-                                        <li>
-                                            SPRZEDAŻ INWESTYCJI JUŻ WKRÓTCE!
-                                        </li>
+                                        <li>INWESTYCJA W PRZYGOTOWANIU.</li>
                                     </ul>
-                                    <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}" class="bttn bttn-sm mt-4">WIĘCEJ INFORMACJI</a>
                                 </div>
                             </div>
                         </div>
@@ -224,6 +221,8 @@
                         <p>&nbsp;</p>
                         <h2>Kontakt do Biura Sprzedaży</h2>
                         <p>tel. <a href="tel:+48607823400">+48 607 823 400</a></p>
+                        <p>e-mail: <a href="mailto:kontakt@sgdevelopment.pl">kontakt@sgdevelopment.pl</a></p>
+                        <p>Biuro sprzedaży bezpośrednio przy inwestycji ul. Abrahama 14</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 mt-5 mt-md-0">
