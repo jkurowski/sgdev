@@ -352,11 +352,15 @@
                         <div class="news-entry d-flex">
                             <div class="news-thumb">
                                 @if($article->content)
-                                <a href="{{route('front.news.show', $article->slug)}}">
-                                @endif
-                                    <img src="{{ asset('/uploads/articles/thumbs/webp/'.$article->file_webp) }}" alt="{{ $article->file_alt }}">
-                                @if($article->content)
-                                </a>
+                                    <a href="{{route('front.news.show', $article->slug)}}">
+                                        @endif
+                                        <picture>
+                                            <source type="image/webp" srcset="{{asset('uploads/articles/thumbs/webp/'.$article->file_webp) }}">
+                                            <source type="image/jpeg" srcset="{{asset('uploads/articles/thumbs/'.$article->file) }}">
+                                            <img src="{{asset('uploads/articles/thumbs/'.$article->file) }}" alt="{{ $article->file_alt }}">
+                                        </picture>
+                                        @if($article->content)
+                                    </a>
                                 @endif
                             </div>
                             <div class="news-text ps-4">
