@@ -355,9 +355,9 @@
                                     <a href="{{route('front.news.show', $article->slug)}}">
                                         @endif
                                         <picture>
-                                            <source type="image/webp" srcset="{{asset('uploads/articles/thumbs/webp/'.$article->file_webp) }}">
-                                            <source type="image/jpeg" srcset="{{asset('uploads/articles/thumbs/'.$article->file) }}">
-                                            <img src="{{asset('uploads/articles/thumbs/'.$article->file) }}" alt="{{ $article->file_alt }}">
+                                            <source type="image/webp" srcset="{{asset('/uploads/articles/thumbs/webp/'.$article->file_webp) }}">
+                                            <source type="image/jpeg" srcset="{{asset('/uploads/articles/thumbs/'.$article->file) }}">
+                                            <img src="{{asset('/uploads/articles/thumbs/'.$article->file) }}" alt="{{ $article->file_alt }}">
                                         </picture>
                                         @if($article->content)
                                     </a>
