@@ -133,7 +133,7 @@
     <div class="bottom-section">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 d-none">
                     <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">
                         <div class="main-invest">
                             <div class="main-invest-title">
