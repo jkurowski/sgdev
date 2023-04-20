@@ -8,7 +8,7 @@
             <div class="col-12 col-lg-3 d-flex justify-content-center justify-content-lg-end align-items-center">
                 <div id="logo">
                     <a href="/" aria-label="Link strony głównej">
-                        <img src="{{ asset("images/logo-sg.png") }}" alt="{{ settings()->get("page_title") }}">
+                        <img src="{{ asset("images/logo-sg.png") }}" alt="Logo {{ settings()->get("page_title") }}" width="328" height="73">
                     </a>
                 </div>
             </div>

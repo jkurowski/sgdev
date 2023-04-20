@@ -5,7 +5,7 @@
                 <div class="col-6 col-lg-2">
                     <div id="logo">
                         <a href="/" aria-label="Link strony głównej">
-                            <img src="{{ asset("images/logo-sg.png") }}" alt="{{ settings()->get("page_title") }}">
+                            <img src="{{ asset("images/logo-sg.png") }}" alt="Logo {{ settings()->get("page_title") }}" width="328" height="73">
                         </a>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
         <li class="socials-instagram"><a href="{{ settings()->get("social_instagram") }}" target="_blank" rel="nofollow" aria-label="Link do profilu Instagram"><i class="lab la-instagram"></i></a></li>
         @endif
         <li class="socials-contact">
-            <a href="{{ route('contact.index') }}">
+            <a href="{{ route('contact.index') }}" aria-label="Link do strony Kontakt">
                 <i class="las la-phone"></i>
             </a>
         </li>
