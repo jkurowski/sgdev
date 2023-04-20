@@ -18,9 +18,6 @@
     <!-- Fonts -->
     <link rel="DNS-prefetch" href="//fonts.googleapis.com"/>
 
-    <!-- Styles -->
-    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-
     @stack('style')
 </head>
 <body class="{{ !empty($body_class) ? $body_class : '' }}">
@@ -461,6 +458,8 @@
 
 @include('layouts.partials.cookies')
 
+<!-- Styles -->
+<link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/styles.min.css') }}" rel="stylesheet">
 
 <!-- jQuery -->
