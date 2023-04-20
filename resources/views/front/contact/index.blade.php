@@ -43,7 +43,11 @@
         <div class="row mt-5 mb-5">
             <div class="col-12 col-md-6">
                 <div class="contact-box p-3 p-md-4">
-                    <img src="{{ asset('/images/biuro.jpg') }}" width="786" height="545" alt="Zdjecie biura sprzedaży">
+                    <picture>
+                        <source type="image/webp" srcset="{{asset('/images/biuro.webp') }}">
+                        <source type="image/jpeg" srcset="{{asset('/images/biuro.jpg') }}">
+                        <img src="{{asset('/images/biuro.jpg') }}" alt="Zdjecie biura sprzedaży" width="786" height="545">
+                    </picture>
                 </div>
             </div>
             <div class="col-12 col-md-6">

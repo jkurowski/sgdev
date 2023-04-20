@@ -50,7 +50,9 @@
 
 @include('layouts.partials.cookies')
 
-@include('inline.modal')
+@auth
+    @include('inline.modal')
+@endauth
 
 <!-- jQuery -->
 <script src="{{ asset('/js/jquery.min.js') }}" charset="utf-8"></script>
