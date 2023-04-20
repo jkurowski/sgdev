@@ -23,7 +23,7 @@
                                     <picture>
                                         <source type="image/webp" srcset="{{asset('/uploads/articles/thumbs/webp/'.$article->file_webp) }}">
                                         <source type="image/jpeg" srcset="{{asset('/uploads/articles/thumbs/'.$article->file) }}">
-                                        <img src="{{asset('/uploads/articles/thumbs/'.$article->file) }}" alt="{{ $article->file_alt }}">
+                                        <img src="{{asset('/uploads/articles/thumbs/'.$article->file) }}" alt="{{ $article->file_alt }}" width="360" height="360">
                                     </picture>
                                     @if($article->content)
                                         </a>
