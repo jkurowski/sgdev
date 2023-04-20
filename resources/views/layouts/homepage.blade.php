@@ -146,7 +146,7 @@
                                 <h2>Abrahama</h2>
                             </div>
                             <div class="main-invest-logo">
-                                <img src="/uploads/box/project-logo-abrahama.png" alt="Logo inwestycji Abrahama" width="322" height=108"">
+                                <img src="/uploads/box/project-logo-abrahama.png" alt="Logo inwestycji Abrahama" width="322" height="108">
                             </div>
                             <div class="main-invest-map">
                                 <img src="/uploads/box/project-map-goclaw.png" alt="Mapa inwestycji Abrahama" width="310" height="169">
