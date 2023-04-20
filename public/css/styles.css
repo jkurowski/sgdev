@@ -1245,6 +1245,7 @@ section {
 #mainInvest .main-invest-logo img {
   margin: 0 auto;
   height: 70px;
+  width: auto;
 }
 #mainInvest .main-invest-map {
   padding: 0 30px 70px;
