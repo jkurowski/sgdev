@@ -137,8 +137,8 @@
                 </div>
                 <div class="mt-5 mt-xl-0 col-12 col-xl-6">
                     <div class="position-sticky">
-                        <img class="d-none d-xl-block" src="{{ asset('/uploads/abrahama-14-budynek.jpg') }}" alt="Wizualizacja budynku, w tle zielone tereny">
-                        <img class="d-block d-xl-none" src="{{ asset('/uploads/abrahama-14-budynek-lg.jpg') }}" alt="Wizualizacja budynku, w tle zielone tereny">
+                        <img class="d-none d-xl-block" src="{{ asset('/uploads/abrahama-14-budynek.jpg') }}" alt="Wizualizacja budynku, w tle zielone tereny" width="768" height="900">
+                        <img class="d-block d-xl-none" src="{{ asset('/uploads/abrahama-14-budynek-lg.jpg') }}" alt="Wizualizacja budynku, w tle zielone tereny" width="960" height="828">
                     </div>
                 </div>
             </div>
