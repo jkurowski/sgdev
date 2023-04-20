@@ -32,7 +32,13 @@
     <ul class="mb-0 list-unstyled rslides">
         @foreach($sliders as $panel)
         <li>
-            <img src="{{ asset("/uploads/slider/".$panel->file) }}" alt="{{ $panel->title }}">
+            <picture>
+                <source type="image/webp" media="(min-width: 801px)" srcset="{{asset('/uploads/slider/webp/'.$panel->file_webp) }}">
+                <source type="image/jpeg" media="(min-width: 801px)" srcset="{{asset("/uploads/slider/".$panel->file) }}">
+                <source type="image/webp" media="(max-width: 800px)" srcset="{{asset('/uploads/slider/mobile/webp/'.$panel->file_webp) }}">
+                <source type="image/jpeg" media="(max-width: 800px)" srcset="{{asset("/uploads/slider/mobile/".$panel->file) }}">
+                <img src="{{asset("/uploads/slider/".$panel->file) }}" alt="{{ $panel->title }}" width="1920" height="900">
+            </picture>
             <div class="slider-apla">
                 <h2>
                     @if($panel->link)<a href="{{ $panel->link }}">@endif
@@ -133,37 +139,6 @@
     <div class="bottom-section">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4 d-none">
-                    <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">
-                        <div class="main-invest">
-                            <div class="main-invest-title">
-                                <h2>Radarowa</h2>
-                            </div>
-                            <div class="main-invest-logo">
-                                <img src="/uploads/box/project-logo-radarowa.png" alt="">
-                            </div>
-                            <div class="main-invest-map">
-                                <img src="/uploads/box/project-map-wlochy.png" alt="">
-                            </div>
-                            <div class="main-invest-thumb">
-                                <img src="/uploads/box/project-radarowa.jpg" alt="">
-                            </div>
-                            <div class="main-invest-desc">
-                                <ul class="mb-0 list-unstyled">
-                                    <li>
-                                        Oddanie inwestycji: <span class="float-end">-</span>
-                                    </li>
-                                    <li>
-                                        DOSTĘPNYCH MIESZKAŃ: <span class="float-end">-</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="main-invest-footer">
-                            WIĘCEJ O INWESTYCJI
-                        </div>
-                    </a>
-                </div>
                 <div class="mt-5 mt-md-0 col-12 col-md-6 col-lg-4">
                     <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">
                         <div class="main-invest">
@@ -171,13 +146,17 @@
                                 <h2>Abrahama</h2>
                             </div>
                             <div class="main-invest-logo">
-                                <img src="/uploads/box/project-logo-abrahama.png" alt="">
+                                <img src="/uploads/box/project-logo-abrahama.png" alt="Logo inwestycji Abrahama" width="322" height=108"">
                             </div>
                             <div class="main-invest-map">
-                                <img src="/uploads/box/project-map-goclaw.png" alt="">
+                                <img src="/uploads/box/project-map-goclaw.png" alt="Mapa inwestycji Abrahama" width="310" height="169">
                             </div>
                             <div class="main-invest-thumb">
-                                <img src="/uploads/box/project-abrahama.jpg" alt="">
+                                <picture>
+                                    <source type="image/webp" srcset="{{asset('/uploads/box/project-abrahama.webp') }}">
+                                    <source type="image/jpeg" srcset="{{asset('/uploads/box/project-abrahama.jpg') }}">
+                                    <img src="{{asset('/uploads/box/project-abrahama.jpg') }}" alt="Zdjecie biura sprzedaży" width="600" height="493">
+                                </picture>
                             </div>
                             <div class="main-invest-desc">
                                 <ul class="mb-0 list-unstyled">
@@ -399,7 +378,7 @@
         <div class="row row-apla">
             <div class="col-12 col-md-6">
                 <div class="contact-text">
-                    <img src="/images/logo-sg.png" alt="">
+                    <img src="/images/logo-sg.png" alt="Logo firmy SG Development">
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
                     <h2>Siedziba firmy</h2>

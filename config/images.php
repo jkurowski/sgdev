@@ -116,6 +116,7 @@ return [
         'thumb_height' => 140,
         'file_path' => 'uploads/slider/',
         'thumb_file_path' => 'uploads/slider/thumbs/',
+        'mobile_file_path' => 'uploads/slider/mobile/',
         'preview_file_path' => 'uploads/slider/thumbs/',
     ],
 

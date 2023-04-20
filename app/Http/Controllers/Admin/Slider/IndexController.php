@@ -73,7 +73,7 @@ class IndexController extends Controller
         $this->repository->update($request->validated(), $slider);
 
         if ($request->hasFile('file')) {
-            $this->service->upload($request->title, $request->file('file'), $slider, 1);
+            $this->service->upload($request->title, $request->file('file'), $slider, true);
         }
 
         return redirect(route('admin.slider.index'))->with('success', 'Obrazek zaktualizowany');
