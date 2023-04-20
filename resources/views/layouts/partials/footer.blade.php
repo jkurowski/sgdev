@@ -14,9 +14,9 @@
             </div>
             <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                 <div class="text-center text-lg-end">
-                    <p><a href="">Polityka prywatności</a> / <a href="">Informacje o cookies</a></p>
-                    <p>Realizacja: <a href="">4Dl.pl</a></p>
-                    <p>Powered by: <a href="">DeveloPro.pl</a></p>
+                    <p><a href="/polityka-prywatnosci">Polityka prywatności</a> / <a href="/polityka-cookies">Informacje o cookies</a></p>
+                    <p>Realizacja: <a href="https://www.4dl.pl/" target="_blank">4Dl.pl</a></p>
+                    <p>Powered by: <a href="https://www.developro.pl/" target="_blank">DeveloPro.pl</a></p>
                 </div>
             </div>
         </div>
