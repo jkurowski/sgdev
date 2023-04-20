@@ -72,7 +72,13 @@
                     <div class="invest-cta">
                         <div class="row">
                             <div class="col-12 col-md-5">
-                                <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}"><img src="/uploads/box/project-abrahama.jpg" alt=""></a>
+                                <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">
+                                    <picture>
+                                        <source type="image/webp" srcset="{{asset('/uploads/box/project-abrahama.webp') }}">
+                                        <source type="image/jpeg" srcset="{{asset('/uploads/box/project-abrahama.jpg') }}">
+                                        <img src="{{asset('/uploads/box/project-abrahama.jpg') }}" alt="Zdjecie biura sprzedaży" width="600" height="493">
+                                    </picture>
+                                </a>
                             </div>
                             <div class="col-12 col-md-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
@@ -95,7 +101,11 @@
                     <div class="invest-cta">
                         <div class="row">
                             <div class="col-12 col-md-5">
-                                <img src="/uploads/box/project-planowana.jpg" alt="Inwestycja planowana">
+                                <picture>
+                                    <source type="image/webp" srcset="{{asset('/uploads/box/project-planowana.webp') }}">
+                                    <source type="image/jpeg" srcset="{{asset('/uploads/box/project-planowana.jpg') }}">
+                                    <img src="{{asset('/uploads/box/project-planowana.jpg') }}" alt="Zdjecie biura sprzedaży" width="600" height="493">
+                                </picture>
                             </div>
                             <div class="col-12 col-md-7 d-flex align-items-center justify-content-center">
                                 <div class="invest-cta-text ps-4 pe-5 w-100">
@@ -111,7 +121,6 @@
             </div>
         </div>
     </section>
-
 
 @endsection
 @push('scripts')
