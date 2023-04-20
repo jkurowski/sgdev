@@ -203,7 +203,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <img src="{{ asset('/uploads/abrahama/lokalizacja.jpg') }}" alt="Lokalizacja inwestycji" width="964" height="799">
+                    <picture>
+                        <source type="image/webp" srcset="{{ asset('/uploads/abrahama/lokalizacja.webp') }}">
+                        <source type="image/jpeg" srcset="{{ asset('/uploads/abrahama/lokalizacja.jpg') }}">
+                        <img src="{{ asset('/uploads/abrahama/lokalizacja.jpg') }}" alt="Lokalizacja inwestycji" width="964" height="799">
+                    </picture>
                 </div>
                 <div class="mt-5 mt-lg-0 col-12 col-lg-6 d-flex align-items-center">
                     <div class="ps-0 ps-lg-5">
@@ -218,7 +222,12 @@
             </div>
         </div>
     </section>
-    <img src="{{ asset('/uploads/abrahama/mapa.jpg') }}" width="1920" height="983" alt="Mapa lokalizacji" class="w-100">
+
+    <picture>
+        <source type="image/webp" srcset="{{ asset('/uploads/abrahama/mapa.webp') }}">
+        <source type="image/jpeg" srcset="{{ asset('/uploads/abrahama/mapa.jpg') }}">
+        <img src="{{ asset('/uploads/abrahama/mapa.jpg') }}" alt="Mapa lokalizacji" width="1920" height="983" class="w-100">
+    </picture>
 
     <section id="investMapLegend">
         <div class="container">
