@@ -1348,7 +1348,7 @@ section {
   color: var(--main-color-orange);
 }
 #cta.bg-blue {
-  background: #04025f url("https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/blue-bg-3.jpg") no-repeat center center;
+  background: #04025f url("../images/blue-bg-3.jpg") no-repeat center center;
   background-size: cover;
 }
 #cta.bg-blue h4 {
@@ -1862,7 +1862,7 @@ html.swipebox-html.swipebox-touch {
 /* Contact
 ================================================== */
 #contact {
-  background: #f4f4f4 url("https://sgdevelopment.pl/wp-content/themes/sgdevelopment/assets/images/contact-section-bg.jpg") no-repeat;
+  background: #f4f4f4 url("../images/contact-section-bg.jpg") no-repeat;
   background-size: cover;
 }
 #contact .row-apla {
