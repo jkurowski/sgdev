@@ -385,6 +385,8 @@
                     <p>&nbsp;</p>
                     <h2>Kontakt do Biura Sprzedaży</h2>
                     <p>tel. <a href="tel:+48607823400">+48 607 823 400</a></p>
+                    <p>ul. Abrahama 14 (parking przy budowie)</p>
+                    <p>03-982 Warszawa</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 mt-5 mt-md-0">

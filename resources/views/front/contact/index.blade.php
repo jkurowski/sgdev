@@ -14,19 +14,19 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="contact-box">
                     <div class="contact-icon">
-                        <i class="las la-map-marked-alt"></i>
+                        <i class="las la-envelope-open-text"></i>
                     </div>
-                    <h3>Adres</h3>
-                    <p><a href="" target="_blank">ul. Śliska 3 lok. 1B, 00-127 Warszawa</a></p>
+                    <h3>Napisz do nas</h3>
+                    <p><a href="mailto:kontakt@sgdevelopment.pl">kontakt@sgdevelopment.pl</a></p>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mt-4 mt-md-0">
                 <div class="contact-box">
                     <div class="contact-icon">
-                        <i class="las la-envelope-open-text"></i>
+                        <i class="las la-map-marked-alt"></i>
                     </div>
-                    <h3>Napisz do nas</h3>
-                    <p><a href="mailto:kontakt@sgdevelopment.pl">kontakt@sgdevelopment.pl</a></p>
+                    <h3>Adres</h3>
+                    <p><a href="" target="_blank">ul. Abrahama 14 (parking przy budowie) <br>03-982 Warszawa</a></p>
                 </div>
             </div>
             <div class="col-12 col-lg-4 mt-4 mt-lg-0">
