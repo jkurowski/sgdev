@@ -210,6 +210,10 @@ body {
   background: #f9f9f9;
   color: #222;
 }
+a {
+  color: #04025f;
+  text-decoration: underline;
+}
 .homepage {
   overflow-x: hidden;
 }
