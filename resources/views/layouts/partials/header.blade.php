@@ -13,10 +13,7 @@
                     <nav class="h-100">
                         <ul class="mb-0 list-unstyled d-block d-lg-flex h-100 justify-content-end ps-0 ps-lg-5">
                             <li>
-                                <a href="#">Inwestycje w sprzedaży</a>
-                                <ul class="submenu mb-0 list-unstyled">
-                                    <li><a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">Abrahama 14</a></li>
-                                </ul>
+                                <a href="{{ route('front.investment.show', ['slug' => 'abrahama-14']) }}">Inwestycje w sprzedaży</a>
                             </li>
                             <li><a href="{{ route('about') }}">O nas</a></li>
                             <li><a href="{{ route('front.news.index') }}">Aktualności</a></li>

@@ -161,7 +161,7 @@
                                         Oddanie inwestycji: <span class="float-end">Q4 2024</span>
                                     </li>
                                     <li>
-                                        DOSTĘPNYCH MIESZKAŃ: <span class="float-end">67</span>
+                                        Ilość mieszkań: <span class="float-end">67</span>
                                     </li>
                                 </ul>
                             </div>
