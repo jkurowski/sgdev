@@ -961,6 +961,14 @@ div[class*='col-'].slick-slide {
   font-size: 17px;
   text-transform: uppercase;
 }
+#filtr h2 {
+  color: #ffa22b;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0 25px;
+}
 #sortList select {
   width: 230px;
 }
@@ -1219,6 +1227,10 @@ div[class*='col-'].slick-slide {
     margin-bottom: 5px;
     margin-top: 7px;
     font-size: 12px;
+  }
+  #filtr h2 {
+    font-size: 20px;
+    margin: 10px 0 15px;
   }
 }
 /* Homepage

@@ -128,17 +128,38 @@
                                 </div>
                             </div>
                         </div>
-                        <p><strong>Budynek ABRAHAMA 14 został zaprojektowany z dbałością o każdy szczegół. Projekt odznacza się niebanalną architekturą, oryginalnymi rozwiązaniami i nowoczesnym designem.</strong></p>
-                        <p>&nbsp;</p>
-                        <p>Elegancki, subtelny budynek wtapia się w otoczenie, podnosząc tym samym walory estetyczne najbliższej okolicy.</p>
-                        <p>&nbsp;</p>
-                        <p>Na 8 kondygnacjach zaprojektowanych zostało 67 mieszkań wraz z podziemnymi miejscami parkingowymi. Na parterze budynku zlokalizowane są lokale usługowe.</p>
                     </div>
                 </div>
                 <div class="mt-5 mt-xl-0 col-12 col-xl-6">
                     <div class="position-sticky">
                         <img class="d-none d-xl-block" src="{{ asset('/uploads/abrahama-14-budynek.jpg') }}" alt="Wizualizacja budynku, w tle zielone tereny" width="768" height="900">
                         <img class="d-block d-xl-none" src="{{ asset('/uploads/abrahama-14-budynek-lg.jpg') }}" alt="Wizualizacja budynku, w tle zielone tereny" width="960" height="828">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @include('front.investment_shared.filtr', ['area_range' => $investment->area_range, 'route' => ['name' => 'front.investment.plan', 'params' => ['slug' => $investment->slug]], 'title' => "Wyszykiwarka mieszkań"])
+
+    <section id="investLocation">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <picture>
+                        <source type="image/webp" srcset="{{ asset('/uploads/abrahama/lokalizacja.webp') }}">
+                        <source type="image/jpeg" srcset="{{ asset('/uploads/abrahama/lokalizacja.jpg') }}">
+                        <img src="{{ asset('/uploads/abrahama/lokalizacja.jpg') }}" alt="Lokalizacja inwestycji" width="964" height="799">
+                    </picture>
+                </div>
+                <div class="mt-5 mt-lg-0 col-12 col-lg-6 d-flex align-items-center">
+                    <div class="ps-0 ps-lg-5">
+                        <h2 class="mb-4">LOKALIZACJA</h2>
+                        <p><strong>Mieszkania na warszawskim Gocławiu z bezpośrednim widokiem na jezioro Balaton.</strong></p>
+                        <p>&nbsp;</p>
+                        <p>Najbliższa okolica obfituje dużą ilością terenów zielonych. ABRAHAMA 14 sąsiaduje z tętniącą życiem tamtejszych restauracji i kawiarenek Saską Kępą.</p>
+                        <p>&nbsp;</p>
+                        <p>Lokalizacja jest także świetnie skomunikowana z większymi arteriami komunikacyjnymi, co pozwala uniknąć korków. ABRAHAMA 14 to projekt dedykowany miłośnikom życia w mieście, elegancji i nowoczesnej architektury.</p>
                     </div>
                 </div>
             </div>
@@ -193,30 +214,6 @@
                             <h3>Tereny rekreacyjne</h3>
                             <p>- obiekty rozrywkowe i sportowe w pobliżu osiedla</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="investLocation">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <picture>
-                        <source type="image/webp" srcset="{{ asset('/uploads/abrahama/lokalizacja.webp') }}">
-                        <source type="image/jpeg" srcset="{{ asset('/uploads/abrahama/lokalizacja.jpg') }}">
-                        <img src="{{ asset('/uploads/abrahama/lokalizacja.jpg') }}" alt="Lokalizacja inwestycji" width="964" height="799">
-                    </picture>
-                </div>
-                <div class="mt-5 mt-lg-0 col-12 col-lg-6 d-flex align-items-center">
-                    <div class="ps-0 ps-lg-5">
-                        <h2 class="mb-4">LOKALIZACJA</h2>
-                        <p><strong>Mieszkania na warszawskim Gocławiu z bezpośrednim widokiem na jezioro Balaton.</strong></p>
-                        <p>&nbsp;</p>
-                        <p>Najbliższa okolica obfituje dużą ilością terenów zielonych. ABRAHAMA 14 sąsiaduje z tętniącą życiem tamtejszych restauracji i kawiarenek Saską Kępą.</p>
-                        <p>&nbsp;</p>
-                        <p>Lokalizacja jest także świetnie skomunikowana z większymi arteriami komunikacyjnymi, co pozwala uniknąć korków. ABRAHAMA 14 to projekt dedykowany miłośnikom życia w mieście, elegancji i nowoczesnej architektury.</p>
                     </div>
                 </div>
             </div>
@@ -285,6 +282,36 @@
                         <img src="{{ asset('/uploads/abrahama/markers/apteki-przychodnie-i-szpitale.png') }}" alt="">
                         <p>Apteki, przychodnie i szpitale</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="investPlan" class="pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    @if($investment->plan)
+                        <div id="plan-holder">
+                            <div class="plan-info">Z planu budynku wybierz piętro.</div>
+                            <img src="{{ asset('/investment/plan/'.$investment->plan->file.'') }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan" class="w-100">
+                            <map name="invesmentplan">
+                                @foreach($investment->floors as $floor)
+                                    @if($floor->html)
+                                        <area
+                                                shape="poly"
+                                                href="{{route('front.investment.floor.index', [$investment->slug, $floor])}}"
+                                                title="{{$floor->name}}"
+                                                alt="floor-{{$floor->id}}"
+                                                data-item="{{$floor->id}}"
+                                                data-floornumber="{{$floor->id}}"
+                                                data-floortype="{{$floor->type}}"
+                                                coords="@if($floor->html) {{cords($floor->html)}} @endif">
+                                    @endif
+                                @endforeach
+                            </map>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -399,3 +426,7 @@
         </section>
     @endif
 @endsection
+@push('scripts')
+    <script src="{{ asset('/js/plan/imagemapster.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('/js/plan/plan.js') }}" charset="utf-8"></script>
+@endpush

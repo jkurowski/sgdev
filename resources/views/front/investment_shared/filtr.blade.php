@@ -1,6 +1,15 @@
 <div id="filtr">
     <div class="container">
-        <form method="get" class="row" action="#filtr">
+
+        @if(isset($title))
+        <div class="row">
+            <div class="col-12">
+                <h2>{{ $title }}</h2>
+            </div>
+        </div>
+        @endif
+
+        <form method="get" class="row" action="@if(isset($route)) {{ route($route['name'], $route['params']) }}#filtr @else #filtr @endif">
             <div class="col-12 col-sm">
                 <label for="filtr-rooms" class="w-100">Pokoje</label>
                 <select name="rooms" id="filtr-rooms">
