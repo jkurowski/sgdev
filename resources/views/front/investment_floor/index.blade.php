@@ -1,7 +1,7 @@
 @extends('layouts.page', ['body_class' => 'investments'])
 
 @section('meta_title', $investment->floor->name)
-@section('seo_title', $page->meta_title.' - '.$investment->floor->name)
+@section('seo_title', $investment->name.' - '.$investment->floor->name)
 @section('seo_description', $page->meta_description)
 
 @section('pageheader')
