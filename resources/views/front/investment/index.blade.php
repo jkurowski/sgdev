@@ -444,7 +444,7 @@
                 promptPosition : "topRight:-137px"
             });
         });
-        @if ($errors->any())
+        @if (session('success') || session('warning') || $errors->any())
         $(window).load(function() {
             const aboveHeight = $('header').outerHeight();
             $('html, body').stop().animate({

@@ -529,7 +529,7 @@
             }, {{ settings()->get("popup_timeout") }} );
         @endif
     });
-    @if($errors->any())
+    @if(session('success') || session('warning') || $errors->any())
     $(window).load(function() {
         const aboveHeight = $('header').outerHeight();
         $('html, body').stop().animate({
