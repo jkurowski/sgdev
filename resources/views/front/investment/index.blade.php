@@ -366,7 +366,7 @@
                                     <label for="form_name">Imię <span class="text-danger">*</span></label>
                                     <input name="form_name" id="form_name" class="validate[required] form-control @error('form_name') is-invalid @enderror" type="text" value="{{ old('form_name') }}">
 
-                                    @error('name')
+                                    @error('form_name')
                                     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                     @enderror
                                 </div>
@@ -378,7 +378,7 @@
                                     <label for="form_email">E-mail <span class="text-danger">*</span></label>
                                     <input name="form_email" id="form_email" class="validate[required] form-control @error('form_email') is-invalid @enderror" type="text" value="{{ old('form_email') }}">
 
-                                    @error('email')
+                                    @error('form_email')
                                     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                     @enderror
                                 </div>
@@ -386,7 +386,7 @@
                                     <label for="form_phone">Telefon <span class="text-danger">*</span></label>
                                     <input name="form_phone" id="form_phone" class="validate[required] form-control @error('form_phone') is-invalid @enderror" type="text" value="{{ old('form_phone') }}">
 
-                                    @error('phone')
+                                    @error('form_phone')
                                     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                     @enderror
                                 </div>
@@ -394,7 +394,7 @@
                                     <label for="form_message">Treść wiadomości <span class="text-danger">*</span></label>
                                     <textarea rows="5" cols="1" name="form_message" id="form_message" class="validate[required] form-control @error('form_message') is-invalid @enderror">{{ old('form_message') }}</textarea>
 
-                                    @error('message')
+                                    @error('form_message')
                                     <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -402,10 +402,15 @@
                                 </div>
                                 <div class="rodo-rules">
                                     @foreach ($rules as $r)
-                                        <div class="col-12">
+                                        <div class="col-12 @error('rule_'.$r->id) is-invalid @enderror">
                                             <div class="rodo-rule clearfix">
                                                 <input name="rule_{{$r->id}}" id="rule_{{$r->id}}" value="1" type="checkbox" @if($r->required === 1) class="validate[required]" @endif data-prompt-position="topLeft:0">
-                                                <label for="zgoda_{{$r->id}}" class="rules-text">{!! $r->text !!}</label>
+                                                <label for="zgoda_{{$r->id}}" class="rules-text">
+                                                    {!! $r->text !!}
+                                                    @error('rule_'.$r->id)
+                                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                                    @enderror
+                                                </label>
                                             </div>
                                         </div>
                                     @endforeach
@@ -414,7 +419,7 @@
                             <div class="row row-form-submit">
                                 <div class="col-12 pt-3">
                                     <div class="input text-center">
-                                        <input name="form_page" type="hidden" value="homepage">
+                                        <input name="form_page" type="hidden" value="{{ $investment->name }}">
                                         <button class="bttn" type="submit">WYŚLIJ WIADOMOŚĆ</button>
                                     </div>
                                 </div>
@@ -429,4 +434,23 @@
 @push('scripts')
     <script src="{{ asset('/js/plan/imagemapster.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/plan/plan.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/validation.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/pl.js') }}" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".validateForm").validationEngine({
+                validateNonVisibleFields: true,
+                updatePromptsPosition:true,
+                promptPosition : "topRight:-137px"
+            });
+        });
+        @if ($errors->any())
+        $(window).load(function() {
+            const aboveHeight = $('header').outerHeight();
+            $('html, body').stop().animate({
+                scrollTop: $('.validateForm').offset().top-aboveHeight
+            }, 1500, 'easeInOutExpo');
+        });
+        @endif
+    </script>
 @endpush

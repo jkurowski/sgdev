@@ -379,6 +379,9 @@ button:focus,
   bottom: 0;
   top: auto;
 }
+.is-invalid .invalid-feedback {
+  display: block;
+}
 /* Aside socials
 ================================================== */
 aside {

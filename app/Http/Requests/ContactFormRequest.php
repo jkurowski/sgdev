@@ -23,12 +23,17 @@ class ContactFormRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+
+        $rules = [
             'form_name' => 'required',
             'form_email' => 'required|email:rfc',
             'form_message' => 'required',
-            'form_phone' => 'required'
+            'form_phone' => 'required',
+            'rule_1' => 'required',
+            'rule_2' => 'required'
         ];
+
+        return $rules;
     }
 
     public function messages()
@@ -38,7 +43,9 @@ class ContactFormRequest extends FormRequest
             'form_email.required' => 'To pole jest wymagane',
             'form_email.email' => 'Nieprawidłowy adres e-mail',
             'form_message.required' => 'To pole jest wymagane',
-            'form_phone.required' => 'To pole jest wymagane'
+            'form_phone.required' => 'To pole jest wymagane',
+            'rule_1.required' => 'To pole jest wymagane',
+            'rule_2.required' => 'To pole jest wymagane'
         ];
     }
 }

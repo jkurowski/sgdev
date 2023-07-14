@@ -390,14 +390,24 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 mt-5 mt-md-0">
-                <form method="post" id="homepage-form" action="{{ route('contact.index') }}" class="validateForm">
+                @if (session('success'))
+                    <div class="alert alert-success border-0">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if (session('warning'))
+                    <div class="alert alert-warning border-0">
+                        {{ session('warning') }}
+                    </div>
+                @endif
+                <form method="post" id="homepage-form" action="{{ route('contact.send') }}" class="validateForm">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-12 col-sm-6 col-xl-4 form-input">
                             <label for="form_name">Imię <span class="text-danger">*</span></label>
                             <input name="form_name" id="form_name" class="validate[required] form-control @error('form_name') is-invalid @enderror" type="text" value="{{ old('form_name') }}">
 
-                            @error('name')
+                            @error('form_name')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
@@ -409,7 +419,7 @@
                             <label for="form_email">E-mail <span class="text-danger">*</span></label>
                             <input name="form_email" id="form_email" class="validate[required] form-control @error('form_email') is-invalid @enderror" type="text" value="{{ old('form_email') }}">
 
-                            @error('email')
+                            @error('form_email')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
@@ -417,7 +427,7 @@
                             <label for="form_phone">Telefon <span class="text-danger">*</span></label>
                             <input name="form_phone" id="form_phone" class="validate[required] form-control @error('form_phone') is-invalid @enderror" type="text" value="{{ old('form_phone') }}">
 
-                            @error('phone')
+                            @error('form_phone')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
@@ -425,7 +435,7 @@
                             <label for="form_message">Treść wiadomości <span class="text-danger">*</span></label>
                             <textarea rows="5" cols="1" name="form_message" id="form_message" class="validate[required] form-control @error('form_message') is-invalid @enderror">{{ old('form_message') }}</textarea>
 
-                            @error('message')
+                            @error('form_message')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -433,10 +443,15 @@
                         </div>
                         <div class="rodo-rules">
                             @foreach ($rules as $r)
-                                <div class="col-12">
+                                <div class="col-12 @error('rule_'.$r->id) is-invalid @enderror">
                                     <div class="rodo-rule clearfix">
                                         <input name="rule_{{$r->id}}" id="rule_{{$r->id}}" value="1" type="checkbox" @if($r->required === 1) class="validate[required]" @endif data-prompt-position="topLeft:0">
-                                        <label for="zgoda_{{$r->id}}" class="rules-text">{!! $r->text !!}</label>
+                                        <label for="rule_{{$r->id}}" class="rules-text">
+                                            {!! $r->text !!}
+                                            @error('rule_'.$r->id)
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                        </label>
                                     </div>
                                 </div>
                             @endforeach
@@ -469,6 +484,9 @@
 <script src="{{ asset('/js/bootstrap.bundle.min.js') }}" charset="utf-8"></script>
 <script src="{{ asset('/js/app.min.js') }}" charset="utf-8"></script>
 
+<script src="{{ asset('js/validation.js') }}" charset="utf-8"></script>
+<script src="{{ asset('js/pl.js') }}" charset="utf-8"></script>
+
 @if(settings()->get("popup_status") == 1)
     <div class="modal" tabindex="-1" id="popModal">
         <div class="modal-dialog modal-dialog-centered">
@@ -485,6 +503,11 @@
 @endif
 <script type="text/javascript">
     $(document).ready(function(){
+        $(".validateForm").validationEngine({
+            validateNonVisibleFields: true,
+            updatePromptsPosition:true,
+            promptPosition : "topRight:-137px"
+        });
         $('#slider ul').responsiveSlides({
                 auto:true,
                 pager:true,
@@ -506,11 +529,11 @@
             }, {{ settings()->get("popup_timeout") }} );
         @endif
     });
-    @if (session('success')||session('warning'))
+    @if($errors->any())
     $(window).load(function() {
         const aboveHeight = $('header').outerHeight();
         $('html, body').stop().animate({
-            scrollTop: $('.alert').offset().top-aboveHeight
+            scrollTop: $('.validateForm').offset().top-aboveHeight
         }, 1500, 'easeInOutExpo');
     });
     @endif
