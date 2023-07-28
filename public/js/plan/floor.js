@@ -10,7 +10,7 @@ function onWindowResize() {
 $(document).ready(function() {
 
 // Tooltip
-    $('img[usemap] area[title]').each(function () {
+    $('area[title]').each(function () {
         const $this = $(this);
         const clas = $this.attr('class');
         $this.qtip({
