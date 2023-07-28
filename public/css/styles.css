@@ -1061,6 +1061,12 @@ div[class*='col-'].slick-slide {
   left: 0;
 }
 /* Kolory dymkow */
+/*
+'1' => 'Na sprzedaż',
+'2' => 'Rezerwacja',
+'3' => 'Sprzedane',
+'4' => 'Wynajęte'
+ */
 .qtip.status-1 .qtip-content {
   background: #25690c;
   border: 1px solid #25690c;
@@ -1068,19 +1074,19 @@ div[class*='col-'].slick-slide {
 .qtip-tip.status-1 canvas {
   background: #25690c !important;
 }
-.qtip.status-3 .qtip-content {
+.qtip.status-2 .qtip-content {
   background: #1660b3;
   border: 1px solid #1660b3;
 }
-.qtip-tip.status-3 canvas {
+.qtip-tip.status-2 canvas {
   background: #1660b3 !important;
   color: black;
 }
-.qtip.status-2 .qtip-content {
+.qtip.status-3 .qtip-content {
   background: #aa1215;
   border: 1px solid #aa1215;
 }
-.qtip-tip.status-2 canvas {
+.qtip-tip.status-3 canvas {
   background: #aa1215 !important;
 }
 .qtip.status-4 .qtip-content {
