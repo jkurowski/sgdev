@@ -2089,6 +2089,10 @@ html.swipebox-html.swipebox-touch {
   .contact-box ul {
     width: 100%;
   }
+  .contact-box .contact-icon {
+    height: 70px;
+    width: 70px;
+  }
 }
 @media (max-width: 1399.98px) {
   footer p {
@@ -2139,6 +2143,7 @@ html.swipebox-html.swipebox-touch {
   }
   .contact-box h3 {
     font-size: 24px;
+    margin: 17px 0 10px;
   }
   .contact-box .contact-icon {
     height: 65px;
@@ -2243,13 +2248,14 @@ html.swipebox-html.swipebox-touch {
   }
   .contact-box h3 {
     font-size: 22px;
+    margin: 10px 0 10px;
   }
   .contact-box .contact-icon {
-    height: 60px;
-    width: 60px;
+    height: 35px;
+    width: 35px;
   }
   .contact-box .contact-icon i {
-    font-size: 37px;
+    font-size: 24px;
   }
   .contact-box li,
   .contact-box p {
@@ -2339,6 +2345,10 @@ html.swipebox-html.swipebox-touch {
   }
   .openmenu header nav ul.submenu:after {
     display: none;
+  }
+  .contact-box .contact-icon {
+    height: 45px;
+    width: 45px;
   }
 }
 /* end of 991.98 */
