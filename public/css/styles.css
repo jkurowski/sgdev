@@ -1972,6 +1972,27 @@ html.swipebox-html.swipebox-touch {
 .contact-box p {
   line-height: normal;
 }
+.contact-box ul {
+  width: 70%;
+  margin: 0 auto;
+}
+.contact-box ul li {
+  line-height: normal;
+  text-align: left;
+  border-bottom: 1px solid #ece8e8;
+  padding: 0 5px 7px 5px;
+  margin-bottom: 7px;
+}
+.contact-box ul li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.contact-box ul li span {
+  float: right;
+  font-weight: 600;
+  color: var(--main-color-blue);
+}
 .googlemap {
   width: 100%;
   height: 250px;
@@ -2065,6 +2086,9 @@ html.swipebox-html.swipebox-touch {
   header nav ul li {
     margin-left: 24px;
   }
+  .contact-box ul {
+    width: 100%;
+  }
 }
 @media (max-width: 1399.98px) {
   footer p {
@@ -2109,6 +2133,23 @@ html.swipebox-html.swipebox-touch {
   }
   .about-page .block-text {
     padding: 0 30px;
+  }
+  .contact-box {
+    padding: 15px !important;
+  }
+  .contact-box h3 {
+    font-size: 24px;
+  }
+  .contact-box .contact-icon {
+    height: 65px;
+    width: 65px;
+  }
+  .contact-box .contact-icon i {
+    font-size: 37px;
+  }
+  .contact-box li,
+  .contact-box p {
+    font-size: 15px;
   }
 }
 @media (max-width: 1199.98px) {
@@ -2196,6 +2237,23 @@ html.swipebox-html.swipebox-touch {
   }
   .about-page .block-text {
     padding: 30px 15px;
+  }
+  .contact-box {
+    padding: 15px !important;
+  }
+  .contact-box h3 {
+    font-size: 22px;
+  }
+  .contact-box .contact-icon {
+    height: 60px;
+    width: 60px;
+  }
+  .contact-box .contact-icon i {
+    font-size: 37px;
+  }
+  .contact-box li,
+  .contact-box p {
+    font-size: 14px;
   }
 }
 /* end of 1199.98 */
