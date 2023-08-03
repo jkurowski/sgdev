@@ -1540,7 +1540,8 @@ article:hover {
   margin: 0;
   line-height: 17px;
 }
-#investGallery .col-6 {
+#investGallery .col-6,
+#investNews .col-6 {
   flex: 0 0 auto;
   width: 25%;
 }
@@ -2362,7 +2363,8 @@ html.swipebox-html.swipebox-touch {
   .invest-cta-text {
     padding: 30px 0 !important;
   }
-  #investGallery .col-6 {
+  #investGallery .col-6,
+  #investNews .col-6 {
     flex: 0 0 auto;
     width: 33.3333%;
   }
@@ -2445,7 +2447,8 @@ html.swipebox-html.swipebox-touch {
     font-size: 11px;
     line-height: 14px;
   }
-  #investGallery .col-6 {
+  #investGallery .col-6,
+  #investNews .col-6 {
     width: 50%;
   }
   .section-title h2 {
