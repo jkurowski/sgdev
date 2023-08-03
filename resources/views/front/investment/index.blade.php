@@ -337,6 +337,11 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    {!! parse_text('[galeria=gallery]3[/galeria]') !!}
+                </div>
+            </div>
         </div>
     </section>
     @endif
