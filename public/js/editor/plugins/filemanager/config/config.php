@@ -6,7 +6,6 @@ if (session_id() == '') {
 
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
-mb_http_input();
 mb_language('uni');
 mb_regex_encoding('UTF-8');
 ob_start('mb_output_handler');
@@ -76,7 +75,7 @@ $config = array(
     | with start and final /
     |
     */
-    'upload_dir' => '/uploads/files/',
+    'upload_dir' => '/uploads/storage/',
     /*
     |--------------------------------------------------------------------------
     | relative path from filemanager folder to upload folder
@@ -85,7 +84,7 @@ $config = array(
     | with final /
     |
     */
-    'current_path' => '../../../../uploads/files/',
+    'current_path' => '../../../../uploads/storage/',
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +95,7 @@ $config = array(
     | DO NOT put inside upload folder
     |
     */
-    'thumbs_base_path' => '../../../../uploads/thumbs/',
+    'thumbs_base_path' => '../../../../uploads/storage-thumbs/',
 
     /*
     |--------------------------------------------------------------------------
@@ -107,8 +106,7 @@ $config = array(
     | DO NOT put inside upload folder
     |
     */
-    'thumbs_upload_dir' => '/uploads/thumbs/',
-
+    'thumbs_upload_dir' => '/uploads/storage-thumbs/',
 
     /*
     |--------------------------------------------------------------------------
@@ -228,7 +226,7 @@ $config = array(
     | default language file name
     |--------------------------------------------------------------------------
     */
-    'default_language' => "pl",
+    'default_language' => "en_EN",
 
     /*
     |--------------------------------------------------------------------------
@@ -251,7 +249,7 @@ $config = array(
     //Show or not show filters button in filemanager
     'show_filter_buttons'                   => true,
     //Show or not language selection feature in filemanager
-    'show_language_selection'				=> false,
+    'show_language_selection'				=> true,
     //active or deactive the transliteration (mean convert all strange characters in A..Za..z0..9 characters)
     'transliteration'						=> false,
     //convert all spaces on files name and folders name with $replace_with variable
@@ -343,7 +341,7 @@ $config = array(
     'rename_files'                            => true,
     'rename_folders'                          => true,
     'duplicate_files'                         => true,
-    'extract_files'                           => false,
+    'extract_files'                           => true,
     'copy_cut_files'                          => true, // for copy/cut files
     'copy_cut_dirs'                           => true, // for copy/cut directories
     'chmod_files'                             => true, // change file permissions
@@ -381,7 +379,7 @@ $config = array(
     //**********************
     //Allowed extensions (lowercase insert)
     //**********************
-    'ext_img'                                 => array( 'jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg', 'ico' ), //Images
+    'ext_img'                                 => array( 'jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg', 'ico', 'webp' ), //Images
     'ext_file'                                => array( 'doc', 'docx', 'rtf', 'pdf', 'xls', 'xlsx', 'txt', 'csv', 'html', 'xhtml', 'psd', 'sql', 'log', 'fla', 'xml', 'ade', 'adp', 'mdb', 'accdb', 'ppt', 'pptx', 'odt', 'ots', 'ott', 'odb', 'odg', 'otp', 'otg', 'odf', 'ods', 'odp', 'css', 'ai', 'kmz','dwg', 'dxf', 'hpgl', 'plt', 'spl', 'step', 'stp', 'iges', 'igs', 'sat', 'cgm', 'tiff',''), //Files
     'ext_video'                               => array( 'mov', 'mpeg', 'm4v', 'mp4', 'avi', 'mpg', 'wma', "flv", "webm" ), //Video
     'ext_music'                               => array( 'mp3', 'mpga', 'm4a', 'ac3', 'aiff', 'mid', 'ogg', 'wav' ), //Audio
@@ -568,9 +566,9 @@ return array_merge(
         'tui_defaults_config' => array(
             //'common.bi.image'                   => $config['common.bi.image'],
             //'common.bisize.width'               => $config['common.bisize.width'],
-            //'common.bisize.height'              => $config['common.bisize.height'],
+            //'common.bisize.height'              => $config['common.bisize.height'], 
             'common.backgroundImage'            => $config['common.backgroundImage'],
-            'common.backgroundColor'            => $config['common.backgroundColor'],
+            'common.backgroundColor'            => $config['common.backgroundColor'], 
             'common.border'                     => $config['common.border'],
             'header.backgroundImage'            => $config['header.backgroundImage'],
             'header.backgroundColor'            => $config['header.backgroundColor'],
