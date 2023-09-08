@@ -57,6 +57,7 @@ class PropertyFormRequest extends FormRequest
             'balcony_area' => '',
             'balcony_area_2' => '',
             'terrace_area' => '',
+            'terrace_area_2' => '',
             'loggia_area' => '',
             'parking_space' => '',
             'garage' => '',
