@@ -63,7 +63,7 @@
                     <h3>Godziny otwarcia biura</h3>
                     <ul class="mb-0 list-unstyled mt-3">
                         <li>Poniedziałek - Piątek: <span>11:00 - 19:00</span></li>
-                        <li>Czwartek: <span>12:00 - 19:00</span></li>
+                        <li>Środa: <span>Obsługa Online</span></li>
                         <li>Sobota: <span>10:00 - 14:00</span></li>
                     </ul>
                 </div>
