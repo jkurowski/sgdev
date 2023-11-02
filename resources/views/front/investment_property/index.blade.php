@@ -64,12 +64,11 @@
                         </a>
                     @endif
                 </div>
-
-                <div class="property-desc d-flex justify-content-center">
                 @if($property->file_pdf && $property->status <> 3)
+                <div class="property-desc d-flex justify-content-center">
                     <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">POBIERZ PLAN .PDF</a>
-                @endif
                 </div>
+                @endif
             </div>
             <div class="col-12 col-xl-7 ps-3 ps-xl-5 mt-4 mt-xl-0">
                 <div id="property-form">
