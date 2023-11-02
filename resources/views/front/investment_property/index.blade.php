@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="property-desc d-flex justify-content-center">
-                @if($property->file_pdf)
+                @if($property->file_pdf && $property->status <> 3)
                     <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">POBIERZ PLAN .PDF</a>
                 @endif
                 </div>
