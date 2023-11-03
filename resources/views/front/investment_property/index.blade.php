@@ -53,8 +53,8 @@
                     </ul>
                 </div>
 
-                <div class="property-img">
-                    @if($property->file)
+                @if($property->file && $property->status <> 3)
+                    <div class="property-img">
                         <a href="{{ asset('/investment/property/'.$property->file) }}" class="swipebox">
                             <picture>
                                 <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
@@ -62,8 +62,9 @@
                                 <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}">
                             </picture>
                         </a>
-                    @endif
-                </div>
+                    </div>
+                @endif
+
                 @if($property->file_pdf && $property->status <> 3)
                 <div class="property-desc d-flex justify-content-center">
                     <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">POBIERZ PLAN .PDF</a>
