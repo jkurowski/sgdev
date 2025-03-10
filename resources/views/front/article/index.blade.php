@@ -97,30 +97,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
-                    <div class="invest-cta">
-                        <div class="row">
-                            <div class="col-12 col-md-5">
-                                <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">
-                                    <picture>
-                                        <source type="image/webp" srcset="{{asset('/uploads/box/project-radarowa.webp') }}">
-                                        <source type="image/jpeg" srcset="{{asset('/uploads/box/project-radarowa.jpg') }}">
-                                        <img src="{{asset('/uploads/box/project-radarowa.jpg') }}" alt="Zdjęcie inwestycji Radarowa" width="600" height="493">
-                                    </picture>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-7 d-flex align-items-center justify-content-center">
-                                <div class="invest-cta-text ps-4 pe-5 w-100">
-                                    <h2><a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}">Budynek mieszkalny z lokalami usługami przy ul. Radarowej</a></h2>
-                                    <ul class="mb-0 list-unstyled mt-4">
-                                        <li>INWESTYCJA W PRZYGOTOWANIU.</li>
-                                    </ul>
-                                    <a href="{{ route('front.investment.show', ['slug' => 'radarowa']) }}" class="bttn bttn-sm mt-4">DOWIEDZ SIĘ WIĘCEJ</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
